@@ -1,0 +1,173 @@
+-------------------------------------------------------------
+----------------------- !PROPERTIES! ------------------------
+-------------------------------------------------------------
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 1
+   prop. index: 1
+        SCF Energy:      -56.2137500204
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 2
+   prop. index: 1
+        SCF Energy:      -56.2145777336
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 3
+   prop. index: 1
+        SCF Energy:      -56.2147024809
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 4
+   prop. index: 1
+        SCF Energy:      -56.2147540695
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 5
+   prop. index: 1
+        SCF Energy:      -56.2147543509
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Electric_Properties
+   comment:     The SCF Calculated Electric Properties
+   geom. index: 5
+   prop. index: 1
+       Filename                          : actividad2_Q2002B.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 0 
+       Do Polarizability Calculation     : 1 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        1.7193757563
+        Electronic Contribution:
+                   0          1          2    
+      0      -0.045656  -0.012320   0.128384
+        Nuclear Contribution:
+                   0          1          2    
+      0       0.271172   0.073236  -0.763210
+        Total Dipole moment:
+                   0          1          2    
+      0       0.225516   0.060917  -0.634826
+** Polarizabilities part of electric properties **
+        Isotropic polarizability :       10.3618735001
+        The raw cartesian tensor (atomic units):
+                   0          1          2    
+      0      10.247949   0.015336  -0.159815
+      1       0.015336  10.195851  -0.043103
+      2      -0.159815  -0.043103  10.641821
+        Diagonalised polarizability tensor :
+                   0          1          2    
+      0      10.191258  10.191725  10.702638
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 6
+   prop. index: 1
+        SCF Energy:      -56.2147543509
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Electric_Properties
+   comment:     The SCF Calculated Electric Properties
+   geom. index: 6
+   prop. index: 1
+       Filename                          : actividad2_Q2002B.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 0 
+       Do Polarizability Calculation     : 1 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        1.7193847999
+        Electronic Contribution:
+                   0          1          2    
+      0      -0.045655  -0.012319   0.128381
+        Nuclear Contribution:
+                   0          1          2    
+      0       0.271172   0.073236  -0.763210
+        Total Dipole moment:
+                   0          1          2    
+      0       0.225517   0.060917  -0.634829
+** Polarizabilities part of electric properties **
+        Isotropic polarizability :        0.0000000000
+        The raw cartesian tensor (atomic units):
+                   0          1          2    
+      0      10.247959   0.015335  -0.159813
+      1       0.015335  10.195861  -0.043102
+      2      -0.159813  -0.043102  10.641826
+        Diagonalised polarizability tensor :
+                   0          1          2    
+      0       0.000000   0.000000   0.000000
+------------------------ !PROPERTY! -------------------------
+   name:        THERMOCHEMISTRY_Energies
+   comment:     The Thermochemistry energies
+   geom. index: 6
+   prop. index: 1
+        Temperature (Kelvin)           :        298.1500000000
+        Pressure (atm)                 :          1.0000000000
+        Total Mass (AMU)               :         17.0310000000
+        Spin Degeneracy                :          1.0000000000
+        Electronic Energy (Hartree)    :        -56.2147543509
+        Translational Energy (Hartree) :          0.0014162714
+        Rotational Energy (Hartree)    :          0.0014162714
+        Vibrational Energy (Hartree)   :          0.0000282745
+        Number of frequencies          :     12      
+        Scaling Factor for frequencies :          1.0000000000
+        Vibrational frequencies        :     
+                  0          1          2          3          4          5    
+      0       0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+                  6          7          8          9         10         11    
+      0     1095.217892 1792.452435 1792.707602 3696.584814 3825.485954 3825.764339
+        Zero Point Energy (Hartree)    :          0.0365149561
+        Inner Energy (Hartree)         :        -56.1753785775
+        Enthalpy (Hartree)             :        -56.1744343684
+        Electronic entropy             :          0.0000000000
+        Rotational entropy             :          0.0064339316
+        Vibrational entropy            :          0.0000334135
+        Translational entropy          :          0.0064339316
+        Entropy                        :          0.0228315957
+        Gibbs Energy (Hartree)          :        -56.1972659641
+-------------------------------------------------------------
+----------------------- !GEOMETRIES! ------------------------
+-------------------------------------------------------------
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    1
+    Coordinates:
+            N     -6.438207760000    2.342356856000    0.038098260900
+            H     -5.420880010600    2.347932625400   -0.019989262800
+            H     -6.749806207700    1.582731622100   -0.565422170000
+            H     -6.749809134900    3.202887412000   -0.409956140300
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    2
+    Coordinates:
+            N     -6.434105339722    2.343478695325    0.026407320446
+            H     -5.434587665090    2.347976731704   -0.020449161078
+            H     -6.745003610909    1.593318522316   -0.558274917807
+            H     -6.745006497479    3.191134566155   -0.404952553760
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    3
+    Coordinates:
+            N     -6.431235674676    2.344263192137    0.018231918113
+            H     -5.431186155708    2.347568994664   -0.016199952987
+            H     -6.748139190977    1.589078729084   -0.556700584261
+            H     -6.748142091838    3.194997599615   -0.402600693066
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    4
+    Coordinates:
+            N     -6.427869584232    2.345169087561    0.008791390403
+            H     -5.427696262339    2.347111051148   -0.011427531970
+            H     -6.751567175043    1.584676411691   -0.554767473899
+            H     -6.751570091586    3.198951965100   -0.399865696734
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    5
+    Coordinates:
+            N     -6.427573818466    2.345238274522    0.008070380649
+            H     -5.427425944760    2.347074585632   -0.011047508718
+            H     -6.751850216330    1.584401515142   -0.554621789155
+            H     -6.751853133643    3.199194140204   -0.399670394976
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    4        Geometry Index:    6
+    Coordinates:
+            N     -6.427573818466    2.345238274522    0.008070380649
+            H     -5.427425944760    2.347074585632   -0.011047508718
+            H     -6.751850216330    1.584401515142   -0.554621789155
+            H     -6.751853133643    3.199194140204   -0.399670394976

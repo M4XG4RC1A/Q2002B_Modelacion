@@ -1,0 +1,40 @@
+%method
+        method DFT
+        runtyp OPT
+end
+%basis
+        basis "def-SVP"
+end
+! Opt NumFreq
+%elprop
+        Polar 1
+end
+%freq QuasiRRHO false
+	CutOffFreq 35
+	end
+%plots Format gOpenMol_bin
+	MO("CO-4.plt",4,0);
+	MO("CO-8.plt",8,0);
+	end
+%output
+        XYZFile true
+        Print [ P_AtPopMO_L ] 1
+        Print [ P_OrbPopMO_L ] 1
+end
+%coords
+        CTyp xyz
+        Charge 0
+        Mult 1
+        Units Angs
+        coords
+        O       -0.4335117287      0.3700044147      1.8319453217                 
+	O        1.5353611596      1.3255936330      0.3425321474                 
+	O        1.3132904301     -1.4020776610     -0.4224588097                 
+	O       -1.0604456273     -1.3256793579      0.2669031912                 
+	O       -1.5923700887      0.9656532550      0.0277953313                 
+	O       -0.2092800777     -0.0484864063     -1.9239521242                 
+	O        2.7749003962     -0.1801785767      2.2895752191                 
+	Co       1.3083402952     -0.2690091833      1.1923434980                 
+	Mn       0.1490127367      0.1429394064     -0.0401139633
+        end
+end

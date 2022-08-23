@@ -1,0 +1,23 @@
+! PAL5 PBE
+
+%method
+        method DFT
+        runtyp OPT
+end
+
+%basis
+        basis "def2-TZVP"
+end
+! NumFreq
+%output
+        XYZFile true
+end
+%coords
+        CTyp xyz
+        Charge 0
+        Mult 0
+        Units Angs
+        coords
+        P       0	0	0
+        end
+end

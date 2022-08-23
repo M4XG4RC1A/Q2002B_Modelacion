@@ -1,0 +1,733 @@
+
+                                 *****************
+                                 * O   R   C   A *
+                                 *****************
+
+           --- An Ab Initio, DFT and Semiempirical electronic structure package ---
+
+                  #######################################################
+                  #                        -***-                        #
+                  #          Department of theory and spectroscopy      #
+                  #               Directorship: Frank Neese             #
+                  #        Max Planck Institute fuer Kohlenforschung    #
+                  #                Kaiser Wilhelm Platz 1               #
+                  #                 D-45470 Muelheim/Ruhr               #
+                  #                      Germany                        #
+                  #                                                     #
+                  #                  All rights reserved                #
+                  #                        -***-                        #
+                  #######################################################
+
+
+                         Program Version 4.2.1 -  RELEASE  -
+
+
+ With contributions from (in alphabetic order):
+   Daniel Aravena         : Magnetic Suceptibility
+   Michael Atanasov       : Ab Initio Ligand Field Theory (pilot matlab implementation)
+   Alexander A. Auer      : GIAO ZORA, VPT2
+   Ute Becker             : Parallelization
+   Giovanni Bistoni       : ED, misc. LED, open-shell LED, HFLD
+   Martin Brehm           : Molecular dynamics
+   Dmytro Bykov           : SCF Hessian
+   Vijay G. Chilkuri      : MRCI spin determinant printing, contributions to CSF-ICE
+   Dipayan Datta          : RHF DLPNO-CCSD density
+   Achintya Kumar Dutta   : EOM-CC, STEOM-CC
+   Dmitry Ganyushin       : Spin-Orbit,Spin-Spin,Magnetic field MRCI
+   Miquel Garcia          : C-PCM Hessian, Gaussian charge scheme
+   Yang Guo               : DLPNO-NEVPT2, CIM, IAO-localization
+   Andreas Hansen         : Spin unrestricted coupled pair/coupled cluster methods
+   Benjamin Helmich-Paris : CASSCF linear response (MC-RPA)
+   Lee Huntington         : MR-EOM, pCC
+   Robert Izsak           : Overlap fitted RIJCOSX, COSX-SCS-MP3, EOM
+   Christian Kollmar      : KDIIS, OOCD, Brueckner-CCSD(T), CCSD density
+   Simone Kossmann        : Meta GGA functionals, TD-DFT gradient, OOMP2, MP2 Hessian
+   Martin Krupicka        : AUTO-CI
+   Lucas Lang             : DCDCAS
+   Dagmar Lenk            : GEPOL surface, SMD
+   Dimitrios Liakos       : Extrapolation schemes; Compound Job, initial MDCI parallelization
+   Dimitrios Manganas     : Further ROCIS development; embedding schemes
+   Dimitrios Pantazis     : SARC Basis sets
+   Taras Petrenko         : DFT Hessian,TD-DFT gradient, ASA, ECA, R-Raman, ABS, FL, XAS/XES, NRVS
+   Peter Pinski           : DLPNO-MP2, DLPNO-MP2 Gradient
+   Christoph Reimann      : Effective Core Potentials
+   Marius Retegan         : Local ZFS, SOC
+   Christoph Riplinger    : Optimizer, TS searches, QM/MM, DLPNO-CCSD(T), (RO)-DLPNO pert. Triples
+   Tobias Risthaus        : Range-separated hybrids, TD-DFT gradient, RPA, STAB
+   Michael Roemelt        : Original ROCIS implementation
+   Masaaki Saitow         : Open-shell DLPNO-CCSD energy and density
+   Barbara Sandhoefer     : DKH picture change effects
+   Avijit Sen             : IP-ROCIS
+   Kantharuban Sivalingam : CASSCF convergence, NEVPT2, FIC-MRCI
+   Bernardo de Souza      : ESD, SOC TD-DFT
+   Georgi Stoychev        : AutoAux, RI-MP2 NMR
+   Willem Van den Heuvel  : Paramagnetic NMR
+   Boris Wezisla          : Elementary symmetry handling
+   Frank Wennmohs         : Technical directorship
+
+
+ We gratefully acknowledge several colleagues who have allowed us to
+ interface, adapt or use parts of their codes:
+   Stefan Grimme, W. Hujo, H. Kruse,             : VdW corrections, initial TS optimization,
+                  C. Bannwarth                     DFT functionals, gCP, sTDA/sTD-DF
+   Ed Valeev, F. Pavosevic, A. Kumar             : LibInt (2-el integral package), F12 methods
+   Garnet Chan, S. Sharma, J. Yang, R. Olivares  : DMRG
+   Ulf Ekstrom                                   : XCFun DFT Library
+   Mihaly Kallay                                 : mrcc  (arbitrary order and MRCC methods)
+   Andreas Klamt, Michael Diedenhofen            : otool_cosmo (COSMO solvation model)
+   Jiri Pittner, Ondrej Demel                    : Mk-CCSD
+   Frank Weinhold                                : gennbo (NPA and NBO analysis)
+   Christopher J. Cramer and Donald G. Truhlar   : smd solvation model
+   Lars Goerigk                                  : TD-DFT with DH, B97 family of functionals
+   V. Asgeirsson, H. Jonsson                     : NEB implementation
+   FAccTs GmbH                                   : IRC, NEB, NEB-TS, Multilevel, MM, QM/MM, CI optimization
+   S Lehtola, MJT Oliveira, MAL Marques          : LibXC Library
+
+
+ Your calculation uses the libint2 library for the computation of 2-el integrals
+ For citations please refer to: http://libint.valeyev.net
+
+ Your ORCA version has been built with support for libXC version: 4.2.3
+ For citations please refer to: https://tddft.org/programs/libxc/
+
+ This ORCA versions uses:
+   CBLAS   interface :  Fast vector & matrix operations
+   LAPACKE interface :  Fast linear algebra routines
+   SCALAPACK package :  Parallel linear algebra routines
+
+
+SCAN-COORDS
+----- Orbital basis set information -----
+Your calculation utilizes the basis: def2-SVP
+   F. Weigend and R. Ahlrichs, Phys. Chem. Chem. Phys. 7, 3297 (2005).
+
+================================================================================
+                                        WARNINGS
+                       Please study these warnings very carefully!
+================================================================================
+
+
+WARNING: The environment variable RSH_COMMAND is not set!
+  ===> : All Displacements for the Numerical Hessian calculation
+         will be started on localhost
+
+WARNING: Geometry Optimization
+  ===> : Switching off AutoStart
+         For restart on a previous wavefunction, please use MOREAD
+
+INFO   : the flag for use of LIBINT has been found!
+
+================================================================================
+                                       INPUT FILE
+================================================================================
+NAME = inputAdvance.inp
+|  1> ! PAL4
+|  2> %method
+|  3>         method DFT
+|  4>         runtyp OPT
+|  5> end
+|  6> %basis
+|  7>         basis "def2-SVP"
+|  8> end
+|  9> ! Opt NumFreq
+| 10> %elprop
+| 11>         Polar 1
+| 12> end
+| 13> %freq QuasiRRHO false
+| 14> 	CutOffFreq 35
+| 15> 	end
+| 16> %plots Format gOpenMol_bin
+| 17> 	MO("CO-4.plt",4,0);
+| 18> 	MO("CO-8.plt",8,0);
+| 19> 	end
+| 20> %output
+| 21>         XYZFile true
+| 22>         Print [ P_AtPopMO_L ] 1
+| 23>         Print [ P_OrbPopMO_L ] 1
+| 24> end
+| 25> %coords
+| 26>         CTyp xyz
+| 27>         Charge 0
+| 28>         Mult 1
+| 29>         Units Angs
+| 30>         coords
+| 31>         O       -0.4335117287      0.3700044147      1.8319453217                 
+| 32> 	O        1.5353611596      1.3255936330      0.3425321474                 
+| 33> 	O        1.3132904301     -1.4020776610     -0.4224588097                 
+| 34> 	O       -1.0604456273     -1.3256793579      0.2669031912                 
+| 35> 	O       -1.5923700887      0.9656532550      0.0277953313                 
+| 36> 	O       -0.2092800777     -0.0484864063     -1.9239521242                 
+| 37> 	O        2.7749003962     -0.1801785767      2.2895752191                 
+| 38> 	Co       1.3083402952     -0.2690091833      1.1923434980                 
+| 39> 	Mn       0.1490127367      0.1429394064     -0.0401139633
+| 40>         end
+| 41> end
+| 42> 
+| 43>                          ****END OF INPUT****
+================================================================================
+
+                       *****************************
+                       * Geometry Optimization Run *
+                       *****************************
+
+Geometry optimization settings:
+Update method            Update   .... BFGS
+Choice of coordinates    CoordSys .... Z-matrix Internals
+Initial Hessian          InHess   .... Almoef's Model
+
+Convergence Tolerances:
+Energy Change            TolE     ....  5.0000e-06 Eh
+Max. Gradient            TolMAXG  ....  3.0000e-04 Eh/bohr
+RMS Gradient             TolRMSG  ....  1.0000e-04 Eh/bohr
+Max. Displacement        TolMAXD  ....  4.0000e-03 bohr
+RMS Displacement         TolRMSD  ....  2.0000e-03 bohr
+Strict Convergence                ....  False
+------------------------------------------------------------------------------
+                        ORCA OPTIMIZATION COORDINATE SETUP
+------------------------------------------------------------------------------
+
+The optimization will be done in new redundant internal coordinates
+Making redundant internal coordinates   ...  (new redundants) done
+Evaluating the initial hessian          ...  (Almloef) done
+Evaluating the coordinates              ...  done
+Calculating the B-matrix                .... done
+Calculating the G-matrix                .... done
+Diagonalizing the G-matrix              .... done
+The first mode is                       ....   93
+The number of degrees of freedom        ....   21
+
+    -----------------------------------------------------------------
+                    Redundant Internal Coordinates
+
+
+    -----------------------------------------------------------------
+         Definition                    Initial Value    Approx d2E/dq
+    -----------------------------------------------------------------
+      1. B(Co  7,O   6)                  1.8337         1.109276   
+      2. B(Co  7,O   3)                  2.7539         0.037752   
+      3. B(Co  7,O   0)                  1.9625         0.691169   
+      4. B(Co  7,O   2)                  1.9727         0.665849   
+      5. B(Co  7,O   1)                  1.8211         1.161921   
+      6. B(Mn  8,O   1)                  1.8620         0.999888   
+      7. B(Mn  8,Co  7)                  1.7415        17.589413   
+      8. B(Mn  8,O   0)                  1.9737         0.663348   
+      9. B(Mn  8,O   5)                  1.9271         0.787100   
+     10. B(Mn  8,O   4)                  1.9271         0.787084   
+     11. B(Mn  8,O   3)                  1.9271         0.787080   
+     12. B(Mn  8,O   2)                  1.9720         0.667493   
+     13. A(Co  7,O   0,Mn  8)           52.5159         0.562431   
+     14. A(Co  7,O   1,Mn  8)           56.4222         0.673322   
+     15. A(Co  7,O   2,Mn  8)           52.3955         0.559111   
+     16. A(Co  7,O   3,Mn  8)           38.8595         0.343849   
+     17. A(O   2,Co  7,O   3)           60.4417         0.334382   
+     18. A(O   6,Co  7,Mn  8)          160.8086         1.327754   
+     19. A(O   0,Co  7,Mn  8)           64.0721         1.201969   
+     20. A(O   2,Co  7,O   6)          121.0391         0.616386   
+     21. A(O   3,Co  7,Mn  8)           43.9723         0.665366   
+     22. A(O   1,Co  7,Mn  8)           62.9743         1.340823   
+     23. A(O   1,Co  7,O   2)           96.9290         0.621950   
+     24. A(O   1,Co  7,O   6)           97.8803         0.687215   
+     25. A(O   0,Co  7,O   2)          117.1315         0.562835   
+     26. A(O   0,Co  7,O   6)          119.9375         0.620860   
+     27. A(O   2,Co  7,Mn  8)           63.7824         1.192607   
+     28. A(O   0,Co  7,O   3)           58.0636         0.336463   
+     29. A(O   3,Co  7,O   6)          155.1724         0.364431   
+     30. A(O   0,Co  7,O   1)           88.7175         0.626471   
+     31. A(O   1,Co  7,O   3)          106.6416         0.367337   
+     32. A(O   0,Mn  8,O   2)          116.6340         0.558711   
+     33. A(O   4,Mn  8,O   5)           84.7704         0.595810   
+     34. A(O   3,Mn  8,O   5)           87.8998         0.595809   
+     35. A(O   1,Mn  8,O   5)          113.7284         0.624018   
+     36. A(O   0,Mn  8,O   1)           87.2348         0.603700   
+     37. A(O   0,Mn  8,O   5)          152.0974         0.576565   
+     38. A(O   2,Mn  8,O   5)           80.9332         0.577253   
+     39. A(O   3,Mn  8,O   4)           75.6777         0.595807   
+     40. A(O   2,Mn  8,O   4)          151.0209         0.577251   
+     41. A(O   1,Mn  8,O   4)          113.2277         0.624015   
+     42. A(O   0,Mn  8,O   4)           69.5597         0.576563   
+     43. A(O   5,Mn  8,Co  7)          142.3808         1.235195   
+     44. A(O   2,Mn  8,O   3)           78.7177         0.577250   
+     45. A(O   1,Mn  8,O   3)          156.7167         0.624015   
+     46. A(O   2,Mn  8,Co  7)           63.8220         1.193223   
+     47. A(O   1,Mn  8,Co  7)           60.6035         1.298985   
+     48. A(O   0,Mn  8,O   3)           75.6015         0.576562   
+     49. A(O   3,Mn  8,Co  7)           97.1682         1.235189   
+     50. A(O   4,Mn  8,Co  7)          132.6562         1.235190   
+     51. A(O   0,Mn  8,Co  7)           63.4121         1.191667   
+     52. A(O   1,Mn  8,O   2)           95.6175         0.604426   
+     53. D(O   6,Co  7,O   3,Mn  8)    177.5441         0.001509   
+     54. D(O   0,Co  7,O   3,Mn  8)     84.4928         0.001509   
+     55. D(O   1,Co  7,O   2,Mn  8)    -55.2450         0.003684   
+     56. D(O   6,Co  7,O   1,Mn  8)    178.5999         0.008301   
+     57. D(O   0,Co  7,O   2,Mn  8)     36.8719         0.003684   
+     58. D(O   3,Co  7,O   2,Mn  8)     49.9874         0.003684   
+     59. D(O   3,Co  7,O   1,Mn  8)     -5.3266         0.008301   
+     60. D(O   0,Co  7,O   1,Mn  8)    -61.3445         0.008301   
+     61. D(O   1,Co  7,O   3,Mn  8)      6.8404         0.001509   
+     62. D(O   2,Co  7,O   0,Mn  8)    -36.7658         0.003855   
+     63. D(O   3,Co  7,O   0,Mn  8)    -50.2153         0.003855   
+     64. D(O   1,Co  7,O   0,Mn  8)     60.3640         0.003855   
+     65. D(O   2,Co  7,O   1,Mn  8)     55.8353         0.008301   
+     66. D(O   6,Co  7,O   2,Mn  8)   -158.7969         0.003684   
+     67. D(O   6,Co  7,O   0,Mn  8)    158.7221         0.003855   
+     68. D(O   2,Co  7,O   3,Mn  8)    -81.7407         0.001509   
+     69. D(O   4,Mn  8,O   2,Co  7)   -132.1310         0.003847   
+     70. D(O   4,Mn  8,Co  7,O   3)     77.1063         0.198063   
+     71. D(O   1,Mn  8,O   2,Co  7)     53.2773         0.003847   
+     72. D(O   5,Mn  8,O   1,Co  7)   -138.1980         0.006840   
+     73. D(O   3,Mn  8,Co  7,O   0)    -69.9276         0.198063   
+     74. D(O   2,Mn  8,Co  7,O   6)    109.4900         0.198063   
+     75. D(O   3,Mn  8,O   1,Co  7)     18.7569         0.006840   
+     76. D(O   4,Mn  8,O   1,Co  7)    127.1961         0.006840   
+     77. D(O   3,Mn  8,Co  7,O   6)   -176.8625         0.198063   
+     78. D(O   0,Mn  8,O   2,Co  7)    -36.4419         0.003847   
+     79. D(O   4,Mn  8,Co  7,O   6)    -99.7561         0.198063   
+     80. D(O   3,Mn  8,O   2,Co  7)   -103.8780         0.003847   
+     81. D(O   5,Mn  8,Co  7,O   2)    -22.2464         0.198063   
+     82. D(O   5,Mn  8,O   2,Co  7)    166.4661         0.003847   
+     83. D(O   2,Mn  8,O   1,Co  7)    -55.6522         0.006840   
+     84. D(O   1,Mn  8,Co  7,O   6)     -4.2225         0.198063   
+     85. D(O   0,Mn  8,O   1,Co  7)     60.8497         0.006840   
+     86. D(O   5,Mn  8,O   0,Co  7)    161.3675         0.003818   
+     87. D(O   1,Mn  8,Co  7,O   0)    102.7123         0.198063   
+     88. D(O   0,Mn  8,Co  7,O   6)   -106.9348         0.198063   
+     89. D(O   4,Mn  8,O   0,Co  7)   -174.3715         0.003818   
+     90. D(O   0,Mn  8,Co  7,O   3)     69.9276         0.198063   
+     91. D(O   0,Mn  8,Co  7,O   2)    143.5752         0.198063   
+     92. D(O   3,Mn  8,O   0,Co  7)    105.8164         0.003818   
+     93. D(O   1,Mn  8,Co  7,O   2)   -113.7125         0.198063   
+     94. D(O   1,Mn  8,Co  7,O   3)    172.6400         0.198063   
+     95. D(O   0,Mn  8,Co  7,O   1)   -102.7123         0.198063   
+     96. D(O   2,Mn  8,Co  7,O   0)   -143.5752         0.198063   
+     97. D(O   2,Mn  8,Co  7,O   1)    113.7125         0.198063   
+     98. D(O   2,Mn  8,Co  7,O   3)    -73.6475         0.198063   
+     99. D(O   5,Mn  8,O   3,Co  7)    142.5845         0.004776   
+    100. D(O   2,Mn  8,O   0,Co  7)     36.5924         0.003818   
+    101. D(O   3,Mn  8,Co  7,O   1)   -172.6400         0.198063   
+    102. D(O   3,Mn  8,Co  7,O   2)     73.6475         0.198063   
+    103. D(O   4,Mn  8,O   3,Co  7)   -132.2784         0.004776   
+    104. D(O   4,Mn  8,Co  7,O   0)      7.1787         0.198063   
+    105. D(O   4,Mn  8,Co  7,O   1)    -95.5336         0.198063   
+    106. D(O   4,Mn  8,Co  7,O   2)    150.7539         0.198063   
+    107. D(O   2,Mn  8,O   3,Co  7)     61.4133         0.004776   
+    108. D(O   1,Mn  8,O   0,Co  7)    -58.3073         0.003818   
+    109. D(O   5,Mn  8,Co  7,O   0)   -165.8216         0.198063   
+    110. D(O   5,Mn  8,Co  7,O   1)     91.4661         0.198063   
+    111. D(O   1,Mn  8,O   3,Co  7)    -16.4010         0.004776   
+    112. D(O   5,Mn  8,Co  7,O   3)    -95.8940         0.198063   
+    113. D(O   5,Mn  8,Co  7,O   6)     87.2436         0.198063   
+    114. D(O   0,Mn  8,O   3,Co  7)    -60.1314         0.004776   
+    -----------------------------------------------------------------
+
+Number of atoms                         .... 9
+Number of degrees of freedom            .... 114
+
+         *************************************************************
+         *                GEOMETRY OPTIMIZATION CYCLE   1            *
+         *************************************************************
+---------------------------------
+CARTESIAN COORDINATES (ANGSTROEM)
+---------------------------------
+  O     -0.433512    0.370004    1.831945
+  O      1.535361    1.325594    0.342532
+  O      1.313290   -1.402078   -0.422459
+  O     -1.060446   -1.325679    0.266903
+  O     -1.592370    0.965653    0.027795
+  O     -0.209280   -0.048486   -1.923952
+  O      2.774900   -0.180179    2.289575
+  Co     1.308340   -0.269009    1.192343
+  Mn     0.149013    0.142939   -0.040114
+
+----------------------------
+CARTESIAN COORDINATES (A.U.)
+----------------------------
+  NO LB      ZA    FRAG     MASS         X           Y           Z
+   0 O     8.0000    0    15.999   -0.819218    0.699207    3.461875
+   1 O     8.0000    0    15.999    2.901412    2.505009    0.647292
+   2 O     8.0000    0    15.999    2.481759   -2.649543   -0.798331
+   3 O     8.0000    0    15.999   -2.003952   -2.505171    0.504374
+   4 O     8.0000    0    15.999   -3.009143    1.824820    0.052526
+   5 O     8.0000    0    15.999   -0.395482   -0.091626   -3.635743
+   6 O     8.0000    0    15.999    5.243802   -0.340488    4.326670
+   7 Co   27.0000    0    58.930    2.472405   -0.508354    2.253203
+   8 Mn   25.0000    0    54.940    0.281593    0.270116   -0.075804
+
+--------------------------------
+INTERNAL COORDINATES (ANGSTROEM)
+--------------------------------
+ O      0   0   0     0.000000000000     0.00000000     0.00000000
+ O      1   0   0     2.647255712656     0.00000000     0.00000000
+ O      2   1   0     2.841604698310    75.33549345     0.00000000
+ O      1   2   3     2.391180971845    94.74595261   332.66493077
+ O      1   2   3     2.225467912003    80.47715259   272.63739322
+ O      3   2   1     2.530792842078    72.14147377    90.11090731
+ O      2   1   3     2.755863601420    74.91747381   284.46051296
+ Co     2   1   3     1.821119421189    47.82988567   320.67726009
+ Mn     8   2   1     1.741463012058    62.97428250    61.34453318
+
+---------------------------
+INTERNAL COORDINATES (A.U.)
+---------------------------
+ O      0   0   0     0.000000000000     0.00000000     0.00000000
+ O      1   0   0     5.002588303379     0.00000000     0.00000000
+ O      2   1   0     5.369854660670    75.33549345     0.00000000
+ O      1   2   3     4.518677173430    94.74595261   332.66493077
+ O      1   2   3     4.205524873514    80.47715259   272.63739322
+ O      3   2   1     4.782505373215    72.14147377    90.11090731
+ O      2   1   3     5.207827469125    74.91747381   284.46051296
+ Co     2   1   3     3.441416963213    47.82988567   320.67726009
+ Mn     8   2   1     3.290888165144    62.97428250    61.34453318
+
+---------------------
+BASIS SET INFORMATION
+---------------------
+There are 3 groups of distinct atoms
+
+ Group   1 Type O   : 7s4p1d contracted to 3s2p1d pattern {511/31/1}
+ Group   2 Type Co  : 14s9p5d1f contracted to 5s3p2d1f pattern {63311/531/41/1}
+ Group   3 Type Mn  : 14s9p5d1f contracted to 5s3p2d1f pattern {63311/531/41/1}
+
+Atom   0O    basis set group =>   1
+Atom   1O    basis set group =>   1
+Atom   2O    basis set group =>   1
+Atom   3O    basis set group =>   1
+Atom   4O    basis set group =>   1
+Atom   5O    basis set group =>   1
+Atom   6O    basis set group =>   1
+Atom   7Co   basis set group =>   2
+Atom   8Mn   basis set group =>   3
+
+
+           ************************************************************
+           *        Program running with 4 parallel MPI-processes     *
+           *              working on a common directory               *
+           ************************************************************
+------------------------------------------------------------------------------
+                           ORCA GTO INTEGRAL CALCULATION
+------------------------------------------------------------------------------
+
+                         BASIS SET STATISTICS AND STARTUP INFO
+
+ # of primitive gaussian shells          ...  142
+ # of primitive gaussian functions       ...  314
+ # of contracted shells                  ...   64
+ # of contracted basis functions         ...  160
+ Highest angular momentum                ...    3
+ Maximum contraction depth               ...    6
+ Integral package used                   ... LIBINT
+ Integral threshhold            Thresh   ...  2.500e-11
+ Primitive cut-off              TCut     ...  2.500e-12
+
+
+------------------------------ INTEGRAL EVALUATION ----------------------------
+
+
+ * One electron integrals 
+ Pre-screening matrix                    ... done
+ Shell pair data                         ... done (   0.001 sec)
+
+
+
+           ************************************************************
+           *        Program running with 4 parallel MPI-processes     *
+           *              working on a common directory               *
+           ************************************************************
+-------------------------------------------------------------------------------
+                                 ORCA SCF
+-------------------------------------------------------------------------------
+
+------------
+SCF SETTINGS
+------------
+Hamiltonian:
+ Density Functional     Method          .... DFT(GTOs)
+ Exchange Functional    Exchange        .... Slater
+   X-Alpha parameter    XAlpha          ....  0.666667
+ Correlation Functional Correlation     .... VWN-5
+ Gradients option       PostSCFGGA      .... off
+   Density functional embedding theory  .... OFF
+
+
+General Settings:
+ Integral files         IntName         .... inputAdvance
+ Hartree-Fock type      HFTyp           .... RHF
+ Total Charge           Charge          ....    0
+ Multiplicity           Mult            ....    1
+ Number of Electrons    NEL             ....  108
+ Basis Dimension        Dim             ....  160
+ Nuclear Repulsion      ENuc            ....   1147.0510550578 Eh
+
+Convergence Acceleration:
+ DIIS                   CNVDIIS         .... on
+   Start iteration      DIISMaxIt       ....    12
+   Startup error        DIISStart       ....  0.200000
+   # of expansion vecs  DIISMaxEq       ....     5
+   Bias factor          DIISBfac        ....   1.050
+   Max. coefficient     DIISMaxC        ....  10.000
+ Newton-Raphson         CNVNR           .... off
+ SOSCF                  CNVSOSCF        .... off
+ Level Shifting         CNVShift        .... on
+   Level shift para.    LevelShift      ....    0.2500
+   Turn off err/grad.   ShiftErr        ....    0.0010
+ Zerner damping         CNVZerner       .... off
+ Static damping         CNVDamp         .... on
+   Fraction old density DampFac         ....    0.7000
+   Max. Damping (<1)    DampMax         ....    0.9800
+   Min. Damping (>=0)   DampMin         ....    0.0000
+   Turn off err/grad.   DampErr         ....    0.1000
+ Fernandez-Rico         CNVRico         .... off
+
+SCF Procedure:
+ Maximum # iterations   MaxIter         ....   125
+ SCF integral mode      SCFMode         .... Direct
+   Integral package                     .... LIBINT
+ Reset frequency        DirectResetFreq ....    20
+ Integral Threshold     Thresh          ....  2.500e-11 Eh
+ Primitive CutOff       TCut            ....  2.500e-12 Eh
+
+Convergence Tolerance:
+ Convergence Check Mode ConvCheckMode   .... Total+1el-Energy
+ Convergence forced     ConvForced      .... 0
+ Energy Change          TolE            ....  1.000e-08 Eh
+ 1-El. energy change                    ....  1.000e-05 Eh
+ DIIS Error             TolErr          ....  5.000e-07
+
+
+Diagonalization of the overlap matrix:
+Smallest eigenvalue                        ... 1.964e-03
+Time for diagonalization                   ...    0.014 sec
+Threshold for overlap eigenvalues          ... 1.000e-08
+Number of eigenvalues below threshold      ... 0
+Time for construction of square roots      ...    0.009 sec
+Total time needed                          ...    0.024 sec
+
+-------------------
+DFT GRID GENERATION
+-------------------
+
+General Integration Accuracy     IntAcc      ...  4.340
+Radial Grid Type                 RadialGrid  ... Gauss-Chebyshev
+Angular Grid (max. acc.)         AngularGrid ... Lebedev-110
+Angular grid pruning method      GridPruning ... 3 (G Style)
+Weight generation scheme         WeightScheme... Becke
+Basis function cutoff            BFCut       ...    1.0000e-11
+Integration weight cutoff        WCut        ...    1.0000e-14
+Grids for H and He will be reduced by one unit
+
+# of grid points (after initial pruning)     ...  17836 (   0.0 sec)
+# of grid points (after weights+screening)   ...  17163 (   0.0 sec)
+nearest neighbour list constructed           ...    0.0 sec
+Grid point re-assignment to atoms done       ...    0.0 sec
+Grid point division into batches done        ...    0.0 sec
+Reduced shell lists constructed in    0.1 sec
+
+Total number of grid points                  ...    17163
+Total number of batches                      ...      271
+Average number of points per batch           ...       63
+Average number of grid points per atom       ...     1907
+Average number of shells per batch           ...    38.45 (60.08%)
+Average number of basis functions per batch  ...    99.43 (62.15%)
+Average number of large shells per batch     ...    29.51 (76.74%)
+Average number of large basis fcns per batch ...    74.78 (75.21%)
+Maximum spatial batch extension              ...  19.28, 18.91, 23.12 au
+Average spatial batch extension              ...   1.07,  1.12,  1.08 au
+
+Time for grid setup =    0.118 sec
+
+------------------------------
+INITIAL GUESS: MODEL POTENTIAL
+------------------------------
+Loading Hartree-Fock densities                     ... done
+Calculating cut-offs                               ... done
+Setting up the integral package                    ... done
+Initializing the effective Hamiltonian             ... done
+Starting the Coulomb interaction                   ... done (   0.0 sec)
+Reading the grid                                   ... done
+Mapping shells                                     ... done
+Starting the XC term evaluation                    ... done (   0.0 sec)
+  promolecular density results
+     # of electrons  =    107.996884017
+     EX              =   -153.489177431
+     EC              =     -8.363982553
+     EX+EC           =   -161.853159985
+Transforming the Hamiltonian                       ... done (   0.0 sec)
+Diagonalizing the Hamiltonian                      ... done (   0.0 sec)
+Back transforming the eigenvectors                 ... done (   0.0 sec)
+Now organizing SCF variables                       ... done
+                      ------------------
+                      INITIAL GUESS DONE (   0.4 sec)
+                      ------------------
+--------------
+SCF ITERATIONS
+--------------
+ITER       Energy         Delta-E        Max-DP      RMS-DP      [F,P]     Damp
+               ***  Starting incremental Fock matrix formation  ***
+  0  -3046.1614727848   0.000000000000 1.04320842  0.01788936  0.9636551 0.7000
+  1  -3048.2262389131  -2.064766128357 0.24298750  0.00757455  0.2517335 0.7000
+  2  -3048.7204006794  -0.494161766268 0.23198403  0.00639236  0.2127179 0.7000
+                               ***Turning on DIIS***
+  3  -3049.1111143551  -0.390713675695 0.25881828  0.00656865  0.1906296 0.7000
+  4  -3049.0285056949   0.082608660241 0.13623757  0.00392838  0.3083842 0.7000
+  5  -3048.5736876879   0.454818006990 0.08488882  0.00275654  0.4990189 0.7000
+  6  -3048.3646213963   0.209066291616 0.06703595  0.00205911  0.6594024 0.7000
+  7  -3048.3607737117   0.003847684532 0.05026516  0.00163331  0.6939383 0.7000
+  8  -3048.4712823250  -0.110508613262 0.18349584  0.00369721  0.6536644 0.7000
+  9  -3048.6028932933  -0.131610968332 0.25593808  0.00631005  0.5012206 0.7000
+ 10  -3049.5010886493  -0.898195356026 0.17365412  0.00457349  0.4769151 0.7000
+ 11  -3049.5130178649  -0.011929215591 0.11616788  0.00317259  0.3296841 0.7000
+ 12  -3049.3861748075   0.126843057487 0.09044568  0.00252933  0.3574533 0.7000
+ 13  -3049.3036790713   0.082495736104 0.09550180  0.00249118  0.3685030 0.7000
+ 14  -3049.4127913962  -0.109112324829 0.11775650  0.00333845  0.3141704 0.7000
+ 15  -3049.5555742209  -0.142782824763 0.13967975  0.00339621  0.3782687 0.7000
+ 16  -3049.5067285296   0.048845691306 0.12066003  0.00391946  0.4675251 0.7000
+ 17  -3049.4030630818   0.103665447821 0.12610742  0.00386019  0.5613463 0.7000
+ 18  -3048.9780787716   0.424984310257 0.12821344  0.00323689  0.7829940 0.7000
+ 19  -3048.3356202268   0.642458544730 0.11768670  0.00272582  0.8378524 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+ 20  -3047.7587057660   0.576914460840 4.00404040  0.04791532  0.8105986 0.7000
+ 21  -3048.6382953412  -0.879589575231 1.13987083  0.01492256  0.3096658 0.7000
+ 22  -3048.6035520552   0.034743286035 0.85053532  0.01067844  0.3132547 0.7000
+ 23  -3047.9561337874   0.647418267734 0.60342263  0.00760997  0.3510666 0.7000
+ 24  -3047.5242123194   0.431921468074 0.42354253  0.00542445  0.5015701 0.7000
+ 25  -3047.3612366891   0.162975630297 0.28761330  0.00526828  0.6022535 0.7000
+ 26  -3047.7885448961  -0.427308207064 0.24208622  0.00634712  0.7800500 0.7000
+ 27  -3048.4045439295  -0.615999033409 0.22030779  0.00590804  0.6006812 0.7000
+ 28  -3048.8658676725  -0.461323742931 0.13516413  0.00474679  0.5327997 0.7000
+ 29  -3048.8945665707  -0.028698898246 0.12076712  0.00346676  0.4437624 0.7000
+ 30  -3048.8814677249   0.013098845844 0.13156969  0.00388108  0.3612920 0.7000
+ 31  -3048.6052692490   0.276198475916 0.20277771  0.00491628  0.5601239 0.7000
+ 32  -3049.3937569165  -0.788487667492 0.13003472  0.00371288  0.4323421 0.7000
+ 33  -3049.5172463398  -0.123489423387 0.09881084  0.00299443  0.3742702 0.7000
+ 34  -3049.4212005426   0.096045797288 0.08766973  0.00283610  0.3377273 0.7000
+ 35  -3049.2217238997   0.199476642897 0.10820540  0.00343021  0.2999544 0.7000
+ 36  -3049.2509774563  -0.029253556668 0.15058602  0.00357124  0.4669916 0.7000
+ 37  -3049.4807495785  -0.229772122148 0.12079380  0.00326510  0.5232742 0.7000
+ 38  -3049.3849059813   0.095843597191 0.09382270  0.00294953  0.4473524 0.7000
+ 39  -3049.1438975173   0.241008463941 0.11131566  0.00352510  0.5712840 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+ 40  -3049.0045308003   0.139366717020 0.26044556  0.00874580  0.5160806 0.7000
+ 41  -3049.5128825258  -0.508351725494 0.25185664  0.00528040  0.2586639 0.7000
+ 42  -3049.1828977882   0.329984737665 0.13632126  0.00339916  0.3979170 0.7000
+ 43  -3048.5595696337   0.623328154482 0.06554031  0.00252899  0.5073398 0.7000
+ 44  -3048.2870354923   0.272534141414 0.05793353  0.00202432  0.6219493 0.7000
+ 45  -3048.2665406956   0.020494796700 0.13445940  0.00344565  0.6663714 0.7000
+ 46  -3047.7376304539   0.528910241700 0.18413136  0.00520442  0.8148818 0.7000
+ 47  -3048.0932127787  -0.355582324868 0.24123944  0.00567825  0.6733951 0.7000
+ 48  -3047.8994460940   0.193766684710 0.17674595  0.00468249  0.9281951 0.7000
+ 49  -3047.4590644026   0.440381691448 0.12798904  0.00407705  1.0379826 0.7000
+ 50  -3047.3492471766   0.109817225943 0.25520455  0.00624403  0.8308172 0.7000
+ 51  -3048.3435855460  -0.994338369374 0.29519756  0.00625312  0.8162035 0.7000
+ 52  -3049.7043409293  -1.360755383314 0.13294421  0.00358020  0.2490484 0.7000
+ 53  -3049.5715495364   0.132791392947 0.07095901  0.00268695  0.3650429 0.7000
+ 54  -3049.5283332261   0.043216310244 0.07340664  0.00239755  0.3482705 0.7000
+ 55  -3049.5934635555  -0.065130329420 0.11804239  0.00305320  0.2781517 0.7000
+ 56  -3049.3874214012   0.206042154299 0.09459912  0.00221574  0.4612914 0.7000
+ 57  -3049.0587025079   0.328718893340 0.22456452  0.00614383  0.5276331 0.7000
+ 58  -3048.6976155517   0.361086956199 0.13430842  0.00408477  0.7327675 0.7000
+ 59  -3047.5664885082   1.131127043458 0.09116663  0.00346692  1.0671098 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+ 60  -3046.6630700398   0.903418468482 3.55219693  0.04624096  1.2019016 0.7000
+ 61  -3048.1223444490  -1.459274409244 1.03508812  0.01505560  0.3001457 0.7000
+ 62  -3047.9720481875   0.150296261501 0.74786892  0.01051923  0.3450483 0.7000
+ 63  -3047.0629484585   0.909099729007 0.53125120  0.00755557  0.4432786 0.7000
+ 64  -3046.4245794404   0.638369018089 0.37359435  0.00546857  0.6127423 0.7000
+ 65  -3046.0865563039   0.338023136508 0.24880177  0.00459715  0.7276472 0.7000
+ 66  -3046.1234088058  -0.036852501929 0.25526414  0.00695089  0.8835102 0.7000
+ 67  -3047.1018777475  -0.978468941698 0.33018907  0.00755444  0.7393328 0.7000
+ 68  -3047.9466249514  -0.844747203822 0.17893910  0.00582688  0.8080289 0.7000
+ 69  -3048.3263075922  -0.379682640876 0.15898636  0.00435701  0.5590779 0.7000
+ 70  -3048.3882496457  -0.061942053454 0.11430281  0.00362034  0.4732425 0.7000
+ 71  -3048.2177629649   0.170486680780 0.20857763  0.00511496  0.5203943 0.7000
+ 72  -3049.2988427464  -1.081079781547 0.16260668  0.00444976  0.3431514 0.7000
+ 73  -3049.4493534291  -0.150510682653 0.09235906  0.00324949  0.3774771 0.7000
+ 74  -3049.2935348288   0.155818600253 0.11990044  0.00342466  0.3955204 0.7000
+ 75  -3048.9463676892   0.347167139655 0.14277397  0.00362558  0.3622766 0.7000
+ 76  -3048.5759321216   0.370435567575 0.18797904  0.00455091  0.5420032 0.7000
+ 77  -3048.6197128578  -0.043780736194 0.12465832  0.00373625  0.5865812 0.7000
+ 78  -3048.4210944379   0.198618419910 0.16334503  0.00459178  0.7248103 0.7000
+ 79  -3048.1666737748   0.254420663129 0.14516511  0.00403537  0.8604051 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+ 80  -3047.8124161301   0.354257644644 0.55216306  0.01311152  0.8801179 0.7000
+ 81  -3048.8689743815  -1.056558251352 0.27205699  0.00666224  0.2843513 0.7000
+ 82  -3048.5076412329   0.361333148554 0.13213608  0.00404316  0.3550357 0.7000
+ 83  -3047.5250575518   0.982583681135 0.06911294  0.00286897  0.5219272 0.7000
+ 84  -3047.1930771237   0.331980428050 0.06799041  0.00223483  0.5980971 0.7000
+ 85  -3047.2405758417  -0.047498717952 0.14038658  0.00363127  0.5983456 0.7000
+ 86  -3046.8108059713   0.429769870433 0.20869438  0.00584251  0.7275936 0.7000
+ 87  -3046.8920645087  -0.081258537394 0.26985674  0.00865406  0.5330094 0.7000
+ 88  -3048.1736462207  -1.281581712019 0.18061104  0.00534265  0.6960336 0.7000
+ 89  -3047.5357625776   0.637883643044 0.16908591  0.00432112  0.8235566 0.7000
+ 90  -3046.9224720665   0.613290511150 0.18693043  0.00442926  0.7335285 0.7000
+ 91  -3046.7779850582   0.144487008257 0.27948907  0.00538211  0.8209436 0.7000
+ 92  -3048.3301613816  -1.552176323353 0.17613598  0.00458996  0.3707330 0.7000
+ 93  -3049.2750901536  -0.944928771989 0.11924197  0.00381146  0.3655195 0.7000
+ 94  -3049.6589251836  -0.383835030020 0.11639702  0.00343444  0.3821208 0.7000
+ 95  -3049.4492392033   0.209685980240 0.16672913  0.00371842  0.3278279 0.7000
+ 96  -3048.4897344371   0.959504766245 0.15937749  0.00405895  0.4979596 0.7000
+ 97  -3047.3271643571   1.162570079980 0.14113549  0.00383051  0.5490335 0.7000
+ 98  -3046.2588690741   1.068295282990 0.20666593  0.00562664  0.8166481 0.7000
+ 99  -3046.8243437893  -0.565474715202 0.16046610  0.00460511  1.0845290 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+100  -3046.4413252073   0.383018582074 3.32464235  0.03257862  1.2592328 0.7000
+101  -3048.2609926557  -1.819667448399 1.00263227  0.01163092  0.3491711 0.7000
+102  -3048.2313881842   0.029604471451 0.70373628  0.00785327  0.3061197 0.7000
+103  -3047.8057954704   0.425592713852 0.49571804  0.00573090  0.4383148 0.7000
+104  -3047.8110865066  -0.005291036201 0.34820989  0.00416745  0.5952878 0.7000
+105  -3047.9160444195  -0.104957912976 0.23222572  0.00364376  0.6846735 0.7000
+106  -3048.0520720070  -0.136027587503 0.19809408  0.00575427  0.8115172 0.7000
+107  -3048.0540617447  -0.001989737666 0.35134195  0.00804808  0.7408157 0.7000
+108  -3048.3136512477  -0.259589502983 0.21273672  0.00521375  0.6449225 0.7000
+109  -3047.0645877031   1.249063544605 0.13129499  0.00421116  0.7625538 0.7000
+110  -3046.3241401255   0.740447577567 0.15028811  0.00388981  0.8286519 0.7000
+111  -3045.9958800096   0.328260115916 0.18044813  0.00500093  0.7581681 0.7000
+112  -3046.4635797598  -0.467699750202 0.33484510  0.00669433  0.7999941 0.7000
+113  -3047.7664774110  -1.302897651231 0.27147263  0.00757789  0.4953877 0.7000
+114  -3049.4341132813  -1.667635870319 0.15738081  0.00497630  0.2452346 0.7000
+115  -3049.4380006218  -0.003887340416 0.10331238  0.00340542  0.3764441 0.7000
+116  -3049.2084503260   0.229550295742 0.09686730  0.00309771  0.4020491 0.7000
+117  -3049.0579102219   0.150540104163 0.11202337  0.00339732  0.3612042 0.7000
+118  -3048.7972199099   0.260690311992 0.14386416  0.00323003  0.5465912 0.7000
+119  -3048.5191004026   0.278119507235 0.17332139  0.00408808  0.6392930 0.7000
+               *** Restarting incremental Fock matrix formation ***
+                                   *** Resetting DIIS ***
+120  -3048.1569873359   0.362113066733 1.29633516  0.01459881  0.6146601 0.7000
+121  -3048.7635114736  -0.606524137720 0.22189719  0.00669687  0.2280195 0.7000
+122  -3048.6083870719   0.155124401722 0.32038091  0.00480026  0.4084097 0.7000
+123  -3048.2631276382   0.345259433683 0.25670919  0.00381690  0.3882908 0.7000
+124  -3048.3367053026  -0.073577664358 0.17938872  0.00298899  0.3823549 0.7000
+
+               *****************************************************
+               *                      ERROR                        *
+               *        SCF NOT CONVERGED AFTER 125 CYCLES         *
+               *****************************************************
+
+
+---------------
+SCF CONVERGENCE
+---------------
+
+  Last Energy change         ...   -7.3578e-02  Tolerance :   1.0000e-08
+  Last MAX-Density change    ...    1.2588e-01  Tolerance :   1.0000e-07
+  Last RMS-Density change    ...    1.8871e-03  Tolerance :   5.0000e-09
+  Last DIIS Error            ...    3.8235e-01  Tolerance :   5.0000e-07
+
+     --------------------------------------------------------------------
+                                      ERROR
+     This wavefunction IS NOT CONVERGED! 
+     And it is 'too far' from meeting the convergence thresholds.
+     Aborting ...
+     Please restart calculation (with larger maxiter?)
+     --------------------------------------------------------------------
+
+
+
+ORCA finished by error termination in SCF
+Calling Command: mpirun -np 4  /home/m4xg4rc1a/orca_4_2_1_linux_x86-64_openmpi314/orca_scf_mpi inputAdvance.gbw b inputAdvance 
+Check for SCF-logfiles
+[file orca_main/maingopt.cpp, line 1376]: ORCA finished with an error in the energy calculation
+

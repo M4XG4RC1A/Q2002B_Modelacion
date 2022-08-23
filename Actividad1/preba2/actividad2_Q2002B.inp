@@ -1,0 +1,29 @@
+#end
+
+%method
+	method HF
+	runtyp OPT
+end
+%basis
+	basis "3-21G"
+end
+! NumFreq
+%elprop
+	Polar 1
+end
+%output
+	XYZFile true
+	Print [ P_AtPopMO_L ] 1
+	Print [ P_OrbPopMO_L ] 1
+end
+%coords
+	CTyp xyz
+	Charge 0
+	Mult 1
+	Units Angs
+	coords
+	C 0.0 0.0 0.0
+	O 0.0 0.0 2.5
+	end
+end
+

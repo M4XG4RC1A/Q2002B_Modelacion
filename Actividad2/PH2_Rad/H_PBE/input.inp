@@ -1,4 +1,4 @@
-! PAL5 PBE
+! PAL4 PBE
 
 %method
         method DFT

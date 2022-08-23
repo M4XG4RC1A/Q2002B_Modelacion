@@ -1,4 +1,4 @@
-! PAL5 VWN
+! PAL5 PBE
 #! VWN/PBE RI
 %method
         method DFT
@@ -53,6 +53,6 @@ end
         Mult 1 #Electrines impar 2 par 1 OH 1
         Units Angs
         coords
-        S       0	0	0
+        O       0	0	0
         end
 end

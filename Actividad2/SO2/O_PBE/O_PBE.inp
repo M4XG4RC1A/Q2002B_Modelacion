@@ -1,5 +1,4 @@
-! PAL4 VWN
-
+! PAL4 PBE
 %method
         method DFT
         runtyp Energy
@@ -9,15 +8,16 @@ end
         basis "def2-TZVP"
 end
 ! NumFreq
+
 %output
         XYZFile true
 end
 %coords
         CTyp xyz
-        Charge 0
-        Mult 2
+        Charge 0 #Carga total OH -1
+        Mult 1 #Electrines impar 2 par 1 OH 1
         Units Angs
         coords
-        H       0	0	0
+        O       0	0	0
         end
 end

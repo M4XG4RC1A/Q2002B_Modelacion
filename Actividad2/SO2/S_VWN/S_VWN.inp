@@ -1,5 +1,4 @@
 ! PAL4 VWN
-
 %method
         method DFT
         runtyp Energy
@@ -14,10 +13,10 @@ end
 end
 %coords
         CTyp xyz
-        Charge 0
-        Mult 2
+        Charge 0 #Carga total OH -1
+        Mult 1 #Electrines impar 2 par 1 OH 1
         Units Angs
         coords
-        H       0	0	0
+        S       0	0	0
         end
 end

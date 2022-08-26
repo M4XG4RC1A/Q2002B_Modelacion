@@ -1,12 +1,12 @@
 ! PAL4 VWN
 %method
         method DFT
-        runtyp OPT
+        runtyp Energy
 end
 %basis
         basis "def2-SVP"
 end
-#! NumFreq
+! NumFreq
 %elprop
         Polar 1
 end

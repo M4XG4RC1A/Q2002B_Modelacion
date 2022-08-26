@@ -7,9 +7,9 @@ end
         basis "def2-SVP"
 end
 #! NumFreq
-%elprop
-        Polar 1
-end
+#%elprop
+#        Polar 1
+#end
 #%plots Format gOpenMol_bin
 #	MO("CO-4.plt",4,0);
 #	MO("CO-8.plt",8,0);

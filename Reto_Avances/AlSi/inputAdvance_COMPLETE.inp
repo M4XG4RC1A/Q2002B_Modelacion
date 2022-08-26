@@ -1,7 +1,7 @@
 ! PAL4 VWN
 %method
         method DFT
-        runtyp Energy
+        runtyp OPT
 end
 %basis
         basis "def2-SVP"

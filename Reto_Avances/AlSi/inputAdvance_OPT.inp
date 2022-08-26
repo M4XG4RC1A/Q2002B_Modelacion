@@ -1,15 +1,15 @@
 ! PAL4 VWN
 %method
         method DFT
-        runtyp Energy
+        runtyp OPT
 end
 %basis
         basis "def2-SVP"
 end
-! NumFreq
-%elprop
-        Polar 1
-end
+#! NumFreq
+#%elprop
+#        Polar 1
+#end
 #%plots Format gOpenMol_bin
 #	MO("CO-4.plt",4,0);
 #	MO("CO-8.plt",8,0);

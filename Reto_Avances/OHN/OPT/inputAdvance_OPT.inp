@@ -1,39 +1,30 @@
-! VWN
+! PAL4 VWN
 %method
         method DFT
         runtyp OPT
 end
 
-%cpcm
-       epsilon 80.4
-       refrac 1.33
-       fepstype cosmo
-end
 %scf                  
-       MaxIter 500
+       Maxlter 500
 end
 %geom                  
-       MaxIter 500
+       Maxlter 500
        Convergence loose                                                  
 end
 
 %basis
         basis "def2-SVP"
 end
-! NumFreq
-%elprop
-        Polar 1
-end
 %output
         XYZFile true
 end
 %coords
         CTyp xyz
-        Charge 0
-        Mult 2
+        Charge -1
+        Mult 1
         Units Angs
         coords
-	O	0	0	0
-	H	1	0	0
+	O       0       0       0
+        H       1       0       0
         end
 end

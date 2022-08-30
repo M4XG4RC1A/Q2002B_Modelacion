@@ -30,7 +30,7 @@ end
 %coords
         CTyp xyz
         Charge 0
-        Mult 1
+        Mult 2
         Units Angs
         coords
 	O       0       0       0

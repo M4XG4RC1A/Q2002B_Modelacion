@@ -1,14 +1,14 @@
-! PAL5 VWN
+! VWN
 %method
         method DFT
         runtyp OPT
 end
 
 %scf                  
-       Maxlter 500
+       MaxIter 500
 end
 %geom                  
-       Maxlter 500
+       MaxIter 500
        Convergence loose                                                  
 end
 
@@ -25,7 +25,7 @@ end
 %coords
         CTyp xyz
         Charge 0
-        Mult 1
+        Mult 2
         Units Angs
         coords
 	O	0	0	0

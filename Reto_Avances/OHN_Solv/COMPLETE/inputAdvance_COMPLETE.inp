@@ -29,8 +29,8 @@ end
 end
 %coords
         CTyp xyz
-        Charge 0
-        Mult 2
+        Charge -1
+        Mult 1
         Units Angs
         coords
 	O	0	0	0

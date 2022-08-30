@@ -1,4 +1,4 @@
-! PAL5 VWN
+! VWN
 %method
         method DFT
         runtyp OPT

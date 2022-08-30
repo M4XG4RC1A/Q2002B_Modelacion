@@ -1,4 +1,4 @@
-#end
+! PAL4
 %method
 	method HF
 	runtyp OPT

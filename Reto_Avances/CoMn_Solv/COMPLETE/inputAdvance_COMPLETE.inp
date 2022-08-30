@@ -1,4 +1,4 @@
-! PAL5 VWN
+! VWN
 %method
         method DFT
         runtyp OPT
@@ -13,10 +13,10 @@ end
        fepstype cosmo
 end
 %scf
-       Maxlter 500
+       MaxIter 500
 end
 %geom
-       Maxlter 500
+       MaxIter 500
        Convergence loose
 end
 

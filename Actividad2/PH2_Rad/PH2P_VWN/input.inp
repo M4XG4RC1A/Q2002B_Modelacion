@@ -1,4 +1,4 @@
-! PAL4 VWN
+! VWN
 
 %method
         method DFT
@@ -14,8 +14,8 @@ end
 end
 %coords
         CTyp xyz
-        Charge 1
-        Mult 1
+        Charge 0
+        Mult 2
         Units Angs
         coords
         P       -1.3964703605      0.5346218729     -0.0392481365                 

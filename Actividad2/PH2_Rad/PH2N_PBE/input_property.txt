@@ -2,218 +2,149 @@
 ----------------------- !PROPERTIES! ------------------------
 -------------------------------------------------------------
 ------------------------ !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 1
-   prop. index: 1
-        Diskflag:     2
------------------------- !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 1
    prop. index: 1
-        SCF Energy:     -342.3624022473
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 2
-   prop. index: 1
-        Diskflag:     2
+        SCF Energy:     -341.5264777034
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 2
    prop. index: 1
-        SCF Energy:     -342.3760827459
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 3
-   prop. index: 1
-        Diskflag:     2
+        SCF Energy:     -341.5275725617
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 3
    prop. index: 1
-        SCF Energy:     -342.3807074488
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 4
-   prop. index: 1
-        Diskflag:     2
+        SCF Energy:     -341.5279258326
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 4
    prop. index: 1
-        SCF Energy:     -342.3811431296
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 5
-   prop. index: 1
-        Diskflag:     2
+        SCF Energy:     -341.5279451061
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 5
    prop. index: 1
-        SCF Energy:     -342.3811630109
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 6
-   prop. index: 1
-        Diskflag:     2
+        SCF Energy:     -341.5279460717
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 6
    prop. index: 1
-        SCF Energy:     -342.3811639076
+        SCF Energy:     -341.5279460944
 ------------------------ !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 7
+   name:        SCF_Electric_Properties
+   comment:     The SCF Calculated Electric Properties
+   geom. index: 6
    prop. index: 1
-        Diskflag:     2
+       Filename                          : ./PH2N_PBE/input.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 0 
+       Do Polarizability Calculation     : 0 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        0.2862301612
+        Electronic Contribution:
+                   0          1          2    
+      0      -1.505663   0.020220   0.039008
+        Nuclear Contribution:
+                   0          1          2    
+      0       1.393058  -0.019753  -0.038098
+        Total Dipole moment:
+                   0          1          2    
+      0      -0.112605   0.000467   0.000909
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Energy
    comment:     The SCF energy
    geom. index: 7
    prop. index: 1
-        SCF Energy:     -342.3811639055
+        SCF Energy:     -341.5279460928
 ------------------------ !PROPERTY! -------------------------
    name:        SCF_Electric_Properties
    comment:     The SCF Calculated Electric Properties
    geom. index: 7
    prop. index: 1
-       Filename                          : input.scfp 
+       Filename                          : ./PH2N_PBE/input.scfp 
        Do Dipole Moment Calculation      : 1 
        Do Quadrupole Moment Calculation  : 0 
        Do Polarizability Calculation     : 0 
 ** Dipole moment part of electric properties **
-        Magnitude of dipole moment (Debye) :        0.1618983002
+        Magnitude of dipole moment (Debye) :        0.2861407488
         Electronic Contribution:
                    0          1          2    
-      0      -1.027198  -0.676711  -1.289739
+      0      -1.505628   0.020220   0.039006
         Nuclear Contribution:
                    0          1          2    
-      0       1.066615   0.693187   1.336981
+      0       1.393058  -0.019753  -0.038098
         Total Dipole moment:
                    0          1          2    
-      0       0.039417   0.016476   0.047242
------------------------- !PROPERTY! -------------------------
-   name:        PAL_Flags
-   comment:     The PAL Flags
-   geom. index: 8
-   prop. index: 1
-        Diskflag:     2
------------------------- !PROPERTY! -------------------------
-   name:        SCF_Energy
-   comment:     The SCF energy
-   geom. index: 8
-   prop. index: 1
-        SCF Energy:     -342.3811639091
------------------------- !PROPERTY! -------------------------
-   name:        SCF_Electric_Properties
-   comment:     The SCF Calculated Electric Properties
-   geom. index: 8
-   prop. index: 1
-       Filename                          : input.scfp 
-       Do Dipole Moment Calculation      : 1 
-       Do Quadrupole Moment Calculation  : 0 
-       Do Polarizability Calculation     : 0 
-** Dipole moment part of electric properties **
-        Magnitude of dipole moment (Debye) :        0.1618696237
-        Electronic Contribution:
-                   0          1          2    
-      0      -1.027208  -0.676714  -1.289744
-        Nuclear Contribution:
-                   0          1          2    
-      0       1.066615   0.693187   1.336981
-        Total Dipole moment:
-                   0          1          2    
-      0       0.039407   0.016473   0.047237
+      0      -0.112570   0.000467   0.000908
 ------------------------ !PROPERTY! -------------------------
    name:        THERMOCHEMISTRY_Energies
    comment:     The Thermochemistry energies
-   geom. index: 8
+   geom. index: 7
    prop. index: 1
         Temperature (Kelvin)           :        298.1500000000
         Pressure (atm)                 :          1.0000000000
-        Total Mass (AMU)               :         32.9900000000
+        Total Mass (AMU)               :         31.9820000000
         Spin Degeneracy                :          1.0000000000
-        Electronic Energy (Hartree)    :       -342.3811639091
+        Electronic Energy (Hartree)    :       -341.5279460928
         Translational Energy (Hartree) :          0.0014162714
-        Rotational Energy (Hartree)    :          0.0014162714
-        Vibrational Energy (Hartree)   :          0.0000314896
-        Number of frequencies          :     9      
+        Rotational Energy (Hartree)    :          0.0009441809
+        Vibrational Energy (Hartree)   :          0.0000008088
+        Number of frequencies          :     6      
         Scaling Factor for frequencies :          1.0000000000
         Vibrational frequencies        :     
                   0          1          2          3          4          5    
-      0       0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
-                   6          7          8    
-      0     1044.467555 2198.649040 2207.557623
-        Zero Point Energy (Hartree)    :          0.0124175496
-        Inner Energy (Hartree)         :       -342.3658823271
-        Enthalpy (Hartree)             :       -342.3649381181
+      0       0.000000   0.000000   0.000000   0.000000   0.000000 1925.530000
+        Zero Point Energy (Hartree)    :          0.0043866801
+        Inner Energy (Hartree)         :       -341.5211981515
+        Enthalpy (Hartree)             :       -341.5202539425
         Electronic entropy             :          0.0000000000
-        Rotational entropy             :          0.0068516697
-        Vibrational entropy            :          0.0000376826
-        Translational entropy          :          0.0068516697
-        Entropy                        :          0.0241899979
-        Gibbs Energy (Hartree)          :       -342.3891281160
+        Rotational entropy             :          0.0040406598
+        Vibrational entropy            :          0.0000008955
+        Translational entropy          :          0.0040406598
+        Entropy                        :          0.0212982524
+        Gibbs Energy (Hartree)          :       -341.5415521948
 -------------------------------------------------------------
 ----------------------- !GEOMETRIES! ------------------------
 -------------------------------------------------------------
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    1
+    Number of atoms:    2        Geometry Index:    1
     Coordinates:
             P     -1.396470360500    0.534621872900   -0.039248136500
             H      0.172560623800    0.512373718900   -0.082159179900
-            H     -1.965046370800    1.208103803300    1.259727605300
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    2
+    Number of atoms:    2        Geometry Index:    2
     Coordinates:
-            P     -1.422144570435    0.518128529451   -0.071059610682
-            H      0.074945977760    0.556620524814    0.003181680694
-            H     -1.841757514825    1.180350340834    1.206198218888
+            P     -1.375071647333    0.534318448767   -0.039833364656
+            H      0.151161910633    0.512677143033   -0.081573951744
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    3
+    Number of atoms:    2        Geometry Index:    3
     Coordinates:
-            P     -1.448146366075    0.501511026106   -0.103110557798
-            H     -0.044973021427    0.608265931314    0.102792564358
-            H     -1.695836719999    1.145322437680    1.138638282340
+            P     -1.350369896874    0.533968189050   -0.040508926768
+            H      0.126460160174    0.513027402750   -0.080898389632
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    4
+    Number of atoms:    2        Geometry Index:    4
     Coordinates:
-            P     -1.450527334247    0.499815695240   -0.106380420833
-            H     -0.021008707897    0.601652799698    0.090037511610
-            H     -1.717420065356    1.153630900162    1.154663198123
+            P     -1.356071685728    0.534049037853   -0.040352989944
+            H      0.132161949028    0.512946553947   -0.081054326456
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    5
+    Number of atoms:    2        Geometry Index:    5
     Coordinates:
-            P     -1.453350070755    0.497993399186   -0.109895167497
-            H     -0.024422736179    0.604138266709    0.094831346764
-            H     -1.711183300566    1.152967729205    1.153384109633
+            P     -1.355512587361    0.534041110089   -0.040368280588
+            H      0.131602850661    0.512954481711   -0.081039035812
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    6
+    Number of atoms:    2        Geometry Index:    6
     Coordinates:
-            P     -1.454480958680    0.497268271050   -0.111293755666
-            H     -0.025535439871    0.605050280715    0.096590390351
-            H     -1.708939708949    1.152780843336    1.153023654215
+            P     -1.355499825883    0.534040929137   -0.040368629598
+            H      0.131590089183    0.512954662663   -0.081038686802
 ------------------------ !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    7
+    Number of atoms:    2        Geometry Index:    7
     Coordinates:
-            P     -1.454484523995    0.497266769173   -0.111296652405
-            H     -0.025513792503    0.605044852636    0.096579920965
-            H     -1.708957791001    1.152787773291    1.153037020340
------------------------- !GEOMETRY! -------------------------
-    Number of atoms:    3        Geometry Index:    8
-    Coordinates:
-            P     -1.454484523995    0.497266769173   -0.111296652405
-            H     -0.025513792503    0.605044852636    0.096579920965
-            H     -1.708957791001    1.152787773291    1.153037020340
+            P     -1.355499825883    0.534040929137   -0.040368629598
+            H      0.131590089183    0.512954662663   -0.081038686802

@@ -1,0 +1,171 @@
+-------------------------------------------------------------
+----------------------- !PROPERTIES! ------------------------
+-------------------------------------------------------------
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 1
+   prop. index: 1
+        SCF Energy:     -342.3624022473
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 2
+   prop. index: 1
+        SCF Energy:     -342.3760827459
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 3
+   prop. index: 1
+        SCF Energy:     -342.3807074488
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 4
+   prop. index: 1
+        SCF Energy:     -342.3811431296
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 5
+   prop. index: 1
+        SCF Energy:     -342.3811630109
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 6
+   prop. index: 1
+        SCF Energy:     -342.3811639076
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 7
+   prop. index: 1
+        SCF Energy:     -342.3811639055
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Electric_Properties
+   comment:     The SCF Calculated Electric Properties
+   geom. index: 7
+   prop. index: 1
+       Filename                          : input.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 0 
+       Do Polarizability Calculation     : 0 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        0.1618982975
+        Electronic Contribution:
+                   0          1          2    
+      0      -1.027198  -0.676711  -1.289739
+        Nuclear Contribution:
+                   0          1          2    
+      0       1.066615   0.693187   1.336981
+        Total Dipole moment:
+                   0          1          2    
+      0       0.039417   0.016476   0.047242
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Energy
+   comment:     The SCF energy
+   geom. index: 8
+   prop. index: 1
+        SCF Energy:     -342.3811639091
+------------------------ !PROPERTY! -------------------------
+   name:        SCF_Electric_Properties
+   comment:     The SCF Calculated Electric Properties
+   geom. index: 8
+   prop. index: 1
+       Filename                          : input.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 0 
+       Do Polarizability Calculation     : 0 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        0.1618696220
+        Electronic Contribution:
+                   0          1          2    
+      0      -1.027208  -0.676714  -1.289744
+        Nuclear Contribution:
+                   0          1          2    
+      0       1.066615   0.693187   1.336981
+        Total Dipole moment:
+                   0          1          2    
+      0       0.039407   0.016473   0.047237
+------------------------ !PROPERTY! -------------------------
+   name:        THERMOCHEMISTRY_Energies
+   comment:     The Thermochemistry energies
+   geom. index: 8
+   prop. index: 1
+        Temperature (Kelvin)           :        298.1500000000
+        Pressure (atm)                 :          1.0000000000
+        Total Mass (AMU)               :         32.9900000000
+        Spin Degeneracy                :          1.0000000000
+        Electronic Energy (Hartree)    :       -342.3811639091
+        Translational Energy (Hartree) :          0.0014162714
+        Rotational Energy (Hartree)    :          0.0014162714
+        Vibrational Energy (Hartree)   :          0.0000314896
+        Number of frequencies          :     9      
+        Scaling Factor for frequencies :          1.0000000000
+        Vibrational frequencies        :     
+                  0          1          2          3          4          5    
+      0       0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+                   6          7          8    
+      0     1044.467365 2198.648831 2207.557621
+        Zero Point Energy (Hartree)    :          0.0124175486
+        Inner Energy (Hartree)         :       -342.3658823280
+        Enthalpy (Hartree)             :       -342.3649381190
+        Electronic entropy             :          0.0000000000
+        Rotational entropy             :          0.0068516697
+        Vibrational entropy            :          0.0000376826
+        Translational entropy          :          0.0068516697
+        Entropy                        :          0.0241899980
+        Gibbs Energy (Hartree)          :       -342.3891281169
+-------------------------------------------------------------
+----------------------- !GEOMETRIES! ------------------------
+-------------------------------------------------------------
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    1
+    Coordinates:
+            P     -1.396470360500    0.534621872900   -0.039248136500
+            H      0.172560623800    0.512373718900   -0.082159179900
+            H     -1.965046370800    1.208103803300    1.259727605300
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    2
+    Coordinates:
+            P     -1.422144570435    0.518128529451   -0.071059610682
+            H      0.074945977760    0.556620524814    0.003181680694
+            H     -1.841757514825    1.180350340834    1.206198218888
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    3
+    Coordinates:
+            P     -1.448146366440    0.501511026123   -0.103110557766
+            H     -0.044973021232    0.608265931374    0.102792564472
+            H     -1.695836719828    1.145322437604    1.138638282194
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    4
+    Coordinates:
+            P     -1.450527334265    0.499815695270   -0.106380420776
+            H     -0.021008707455    0.601652799541    0.090037511307
+            H     -1.717420065780    1.153630900290    1.154663198370
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    5
+    Coordinates:
+            P     -1.453350070290    0.497993399426   -0.109895167035
+            H     -0.024422735947    0.604138266400    0.094831346170
+            H     -1.711183301263    1.152967729273    1.153384109765
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    6
+    Coordinates:
+            P     -1.454480959014    0.497268271096   -0.111293755577
+            H     -0.025535438290    0.605050280307    0.096590389565
+            H     -1.708939710196    1.152780843697    1.153023654912
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    7
+    Coordinates:
+            P     -1.454484524238    0.497266769205   -0.111296652342
+            H     -0.025513791863    0.605044852502    0.096579920705
+            H     -1.708957791399    1.152787773393    1.153037020537
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3        Geometry Index:    8
+    Coordinates:
+            P     -1.454484524238    0.497266769205   -0.111296652342
+            H     -0.025513791863    0.605044852502    0.096579920705
+            H     -1.708957791399    1.152787773393    1.153037020537

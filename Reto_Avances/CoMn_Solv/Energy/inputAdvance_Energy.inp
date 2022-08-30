@@ -1,0 +1,50 @@
+! PAL5 VWN
+%method
+        method DFT
+        runtyp Energy
+end
+
+%cpcm             
+       epsilon 80.4
+       refrac 1.33
+       fepstype cosmo
+end
+%scf                  
+       Maxlter 500
+end
+%geom                  
+       Maxlter 500
+       Convergence loose                                                  
+end
+
+%basis
+        basis "def2-SVP"
+end
+! NumFreq
+%elprop
+        Polar 1
+end
+%output
+        XYZFile true
+end
+%coords
+        CTyp xyz
+        Charge 0
+        Mult 2
+        Units Angs
+        coords
+        O      0.216214   -0.006219    1.965016
+	O      1.457860    1.465908    0.170578
+	O      1.461175   -1.657734    0.336658
+	O     -1.619033   -1.285334   -0.190267
+	O     -1.795432    1.335463   -0.018287
+	O     -0.178454   -0.282819   -2.151821
+	O      2.928865    0.033011    2.655076
+	Co     1.916410   -0.048912    1.128433
+	Mn    -0.107478   -0.107705    0.062356
+	O     -3.398012   -0.438743   -2.179417
+	Co    -1.827952    0.136125   -1.426456
+	H     -3.665118    0.296023   -2.786998
+	H      3.863775   -0.035801    2.336404
+        end
+end

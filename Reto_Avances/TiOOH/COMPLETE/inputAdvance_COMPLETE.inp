@@ -1,0 +1,36 @@
+! PAL5 VWN
+%method
+        method DFT
+        runtyp OPT
+end
+
+%scf                  
+       Maxlter 500
+end
+%geom                  
+       Maxlter 500
+       Convergence loose                                                  
+end
+
+%basis
+        basis "def2-SVP"
+end
+! NumFreq
+%elprop
+        Polar 1
+end
+%output
+        XYZFile true
+end
+%coords
+        CTyp xyz
+        Charge 0
+        Mult 1
+        Units Angs
+        coords
+	Ti    -1.671960    2.457770   -0.000000
+	O     -3.066310    1.598560   -0.000001
+	O     -0.110402    3.419370    0.000000
+	H      0.603334    2.732930    0.000000
+        end
+end

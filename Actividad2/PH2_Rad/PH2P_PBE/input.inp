@@ -1,4 +1,4 @@
-! PAL5 PBE
+! PBE
 
 %method
         method DFT
@@ -14,7 +14,7 @@ end
 end
 %coords
         CTyp xyz
-        Charge 1
+        Charge 0
         Mult 2
         Units Angs
         coords

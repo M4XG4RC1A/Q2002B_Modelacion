@@ -1,4 +1,4 @@
-! PAL5 PBE0
+! PAL5 PBE0 NumFreq
 %method
         method DFT
         runtyp Energy

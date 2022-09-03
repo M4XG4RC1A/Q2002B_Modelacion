@@ -1,4 +1,4 @@
-! PBE0
+! PBE0 NumFreq
 %method
         method DFT
         runtyp Energy

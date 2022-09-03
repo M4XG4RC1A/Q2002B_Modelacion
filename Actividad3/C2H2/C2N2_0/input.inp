@@ -23,3 +23,8 @@ end
 	H      2.892631   -0.000931    0.815945
         end
 end
+%eprnmr
+        NMRShielding 1
+        Nuclei = all C shift
+        Nuclei = all H shift
+end

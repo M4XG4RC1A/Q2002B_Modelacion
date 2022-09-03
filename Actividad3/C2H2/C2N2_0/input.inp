@@ -25,6 +25,6 @@ end
 end
 %eprnmr
         NMRShielding 1
-        Nuclei = all C shift
-        Nuclei = all H shift
+        Nuclei = all C {shift}
+        Nuclei = all H {shift}
 end

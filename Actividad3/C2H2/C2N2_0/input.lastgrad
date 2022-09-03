@@ -1,0 +1,56 @@
+------------------------------------------------------------------------------
+                         ORCA SCF GRADIENT CALCULATION
+------------------------------------------------------------------------------
+
+ ... reading COSX grid (gridx3)
+Gradient of the Kohn-Sham DFT energy:
+Kohn-Sham wavefunction type      ... RKS
+Hartree-Fock exchange scaling    ...    0.250
+Number of operators              ...    1
+Number of atoms                  ...    8
+Basis set dimensions             ...   98
+Integral neglect threshold       ... 2.5e-11
+Integral primitive cutoff        ... 2.5e-12
+SHARK Integral package           ... ON
+
+Nuc. rep. gradient       (SHARK) ... done (  0.0 sec)
+HCore & Overlap gradient (SHARK) ... done (  0.1 sec)
+RI-J gradient            (SHARK) ... done (  0.3 sec)
+COSX-gradient                    ... done (  2.7 sec)
+Exchange-correlation gradient    ... done
+
+------------------
+CARTESIAN GRADIENT
+------------------
+
+   1   C   :   -0.005420165   -0.000105885    0.000425861
+   2   C   :    0.005472236    0.000060823   -0.000408108
+   3   H   :    0.003127388   -0.000501355    0.002083649
+   4   H   :    0.002839008   -0.001726024   -0.001840763
+   5   H   :    0.002870084    0.002312014   -0.000945210
+   6   H   :   -0.003051227   -0.001772631   -0.001415447
+   7   H   :   -0.003030351    0.002216782   -0.000423931
+   8   H   :   -0.002775166   -0.000554670    0.002520189
+
+Difference to translation invariance:
+           :    0.0000318080   -0.0000709481   -0.0000037591
+
+Difference to rotation invariance:
+           :   -0.0000349695   -0.0000543013   -0.0001946915
+
+Norm of the cartesian gradient     ...    0.0120853941
+RMS gradient                       ...    0.0024669207
+MAX gradient                       ...    0.0054722363
+
+-------
+TIMINGS
+-------
+
+Total SCF gradient time            ...        5.479 sec
+
+One electron gradient       ....       0.055 sec  (  1.0%)
+RI-J Coulomb gradient       ....       0.347 sec  (  6.3%)
+COSX gradient               ....       2.690 sec  ( 49.1%)
+XC gradient                 ....       2.095 sec  ( 38.2%)
+
+Maximum memory used throughout the entire SCFGRAD-calculation: 43.5 MB

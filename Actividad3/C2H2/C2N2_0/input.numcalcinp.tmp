@@ -1,7 +1,0 @@
-input        # BaseName
-input        # GBWName
-48       # number of calculations
-1       # number of CPUs        
-1       # program flag
-0       # printing flag
-1       # free_end

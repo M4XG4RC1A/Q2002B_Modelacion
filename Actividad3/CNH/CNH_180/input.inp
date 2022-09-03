@@ -1,0 +1,20 @@
+! PAL5 PBE0
+%method
+        method DFT
+        runtyp Energy
+end
+%basis
+        basis "def2-TZVP"
+end
+%coords
+        CTyp xyz
+        Charge 0
+        Mult 1
+        Units Angs
+        coords
+	#180
+	N     -1.011290    0.960957    0.000001
+	C      0.144451    0.903804   -0.000000
+	H     -2.068270    1.013340    0.000003
+	end
+end

@@ -1,0 +1,209 @@
+-------------------------------------------------------------
+----------------------- !PROPERTIES! ------------------------
+-------------------------------------------------------------
+# -----------------------------------------------------------
+$ PAL_Flags
+   description: The PAL Flags
+   geom. index: 1
+   prop. index: 1
+        Diskflag:     2
+# -----------------------------------------------------------
+$ SCF_Energy
+   description: The SCF energy
+   geom. index: 1
+   prop. index: 1
+        SCF Energy:      -93.2633579634
+# -----------------------------------------------------------
+$ DFT_Energy
+   description: The DFT energy
+   geom. index: 1
+   prop. index: 1
+   Number of Alpha Electrons                  7.0000027706 
+   Number of Beta  Electrons                  7.0000027706 
+   Total number of  Electrons                14.0000055411 
+   Exchange energy                           -9.0409342352 
+   Correlation energy                        -0.4445275974 
+   Correlation energy NL                      0.0000000000 
+   Exchange-Correlation energy               -9.4854618326 
+   Embedding correction                       0.0000000000 
+   Total DFT Energy (No VdW correction)     -93.2633579634 
+# -----------------------------------------------------------
+$ Mayer_Pop
+   description: The Mayer population analysis
+   geom. index: 1
+   prop. index: 1
+     Number of atoms                     : 3
+     Threshold for printing              : 0.1000000
+     Number of bond orders printed       : 3
+  NA   - Mulliken gross atomic population
+  ZA   - Total nuclear charge
+  QA   - Mulliken gross atomic charge
+  VA   - Mayer's total valence
+  BVA  - Mayer's bonded valence
+  FA   - Mayer's free valence
+  ATOM       NA         ZA         QA         VA         BVA        FA
+  0   0     6.2660     6.0000    -0.2660     3.0519     3.0519     0.0000
+  1   0     6.9766     7.0000     0.0234     2.6895     2.6895     0.0000
+  2   0     0.7574     1.0000     0.2426     0.9928     0.9928     0.0000
+      Bond orders larger than 0.1000000
+           Atom A     A.N. of A          Atom B    A.N. of B              Bond order
+                0             6               1            7                2.374289
+                0             6               2            1                0.677598
+                1             7               2            1                0.315209
+# -----------------------------------------------------------
+$ SCF_Electric_Properties
+   description: The SCF Calculated Electric Properties
+   geom. index: 1
+   prop. index: 1
+       Filename                          : HCN_75.scfp 
+       Do Dipole Moment Calculation      : true 
+       Do Quadrupole Moment Calculation  : false 
+       Do Polarizability Calculation     : false 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        1.1090649837
+        Electronic Contribution:
+                  0    
+      0       0.412482
+      1      -0.020431
+      2      -0.366491
+        Nuclear Contribution:
+                  0    
+      0      -0.811873
+      1       0.040250
+      2       0.541073
+        Total Dipole moment:
+                  0    
+      0      -0.399391
+      1       0.019819
+      2       0.174582
+# -----------------------------------------------------------
+$ EPRNMR_OrbitalShielding
+   description: Orbital contribution to the NMR Shielding tensor (ppm)
+   geom. index: 1
+   prop. index: 1
+ Number of stored nuclei 3
+ Source density: 1 SCF 
+ Nucleus: 1 N 
+ Shielding tensor (ppm): 
+                  0          1          2    
+      0     -298.211123 -13.246416 -39.695749
+      1     -13.238489 -564.894632   1.980678
+      2      74.211271  -3.653800 231.008910
+ P Tensor eigenvectors:
+                   0          1          2    
+      0      -0.468864  -0.881884  -0.049475
+      1       0.023235   0.043680  -0.998775
+      2       0.882965  -0.469439   0.000011
+ P Eigenvalues: 
+                  0          1          2    
+      0     100.204027 -166.750286 -565.550586
+P(iso)  -210.698948
+ Nucleus: 0 C 
+ Shielding tensor (ppm): 
+                  0          1          2    
+      0     -120.893817   3.612335 113.989161
+      1       3.621013 -48.085292  -5.641074
+      2      57.945214  -2.864650 270.254084
+ P Tensor eigenvectors:
+                   0          1          2    
+      0       0.049448  -0.998404   0.027291
+      1       0.998777   0.049430  -0.001341
+      2      -0.000010   0.027324   0.999627
+ P Eigenvalues: 
+                  0          1          2    
+      0     -47.906080 -125.482779 274.663834
+P(iso)  33.758325
+ Nucleus: 2 H 
+ Shielding tensor (ppm): 
+                  0          1          2    
+      0      22.019225   0.762407  -6.736206
+      1       0.761290  37.329745   0.334214
+      2      -0.089112   0.003510  29.287403
+ P Tensor eigenvectors:
+                   0          1          2    
+      0      -0.950718  -0.306066  -0.049579
+      1       0.047171   0.015264  -0.998770
+      2      -0.306447   0.951888   0.000074
+ P Eigenvalues: 
+                  0          1          2    
+      0      20.674111  30.594701  37.367561
+P(iso)  29.545457
+# -----------------------------------------------------------
+$ PAL_Flags
+   description: The PAL Flags
+   geom. index: 2
+   prop. index: 1
+        Diskflag:     2
+# -----------------------------------------------------------
+$ SCF_Energy
+   description: The SCF energy
+   geom. index: 2
+   prop. index: 1
+        SCF Energy:      -93.2633579634
+# -----------------------------------------------------------
+$ DFT_Energy
+   description: The DFT energy
+   geom. index: 2
+   prop. index: 1
+   Number of Alpha Electrons                  7.0000027706 
+   Number of Beta  Electrons                  7.0000027706 
+   Total number of  Electrons                14.0000055411 
+   Exchange energy                           -9.0409342352 
+   Correlation energy                        -0.4445275974 
+   Correlation energy NL                      0.0000000000 
+   Exchange-Correlation energy               -9.4854618326 
+   Embedding correction                       0.0000000000 
+   Total DFT Energy (No VdW correction)     -93.2633579634 
+# -----------------------------------------------------------
+$ THERMOCHEMISTRY_Energies
+   description: The Thermochemistry energies
+   geom. index: 2
+   prop. index: 1
+        Temperature (Kelvin)           :        298.1500000000
+        Pressure (atm)                 :          1.0000000000
+        Total Mass (AMU)               :         27.0260000000
+        Spin Degeneracy                :          1.0000000000
+        Electronic Energy (Hartree)    :        -93.2633579634
+        Translational Energy (Hartree) :          0.0014162714
+        Rotational Energy (Hartree)    :          0.0014162714
+        Vibrational Energy (Hartree)   :          0.0000002112
+        Number of frequencies          :     9      
+        Scaling Factor for frequencies :          1.0000000000
+        Vibrational frequencies        :     
+                  0    
+      0       0.000000
+      1       0.000000
+      2       0.000000
+      3       0.000000
+      4       0.000000
+      5       0.000000
+      6     -1390.962114
+      7     2235.146919
+      8     3596.982054
+        Zero Point Energy (Hartree)    :          0.0132865674
+        Inner Energy (Hartree)         :        -93.2472386420
+        Enthalpy (Hartree)             :        -93.2462944329
+        Electronic entropy             :          0.0000000000
+        Rotational entropy             :          0.0076139403
+        Vibrational entropy            :          0.0000002301
+        Translational entropy          :          0.0076139403
+        Entropy                        :          0.0246324043
+        Gibbs Energy (Hartree)         :        -93.2709268372
+        Is Linear                      :                 false
+# -------------------------------------------------------------
+----------------------- !GEOMETRIES! ------------------------
+# -------------------------------------------------------------
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3 
+    Geometry Index:     1 
+    Coordinates:
+               0 C     -1.011290000000    0.960957000000    0.000001000000
+               1 N     -1.306086000000    0.975537000000   -1.118876000000
+               2 H     -2.068270000000    1.013340000000    0.000003000000
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    3 
+    Geometry Index:     2 
+    Coordinates:
+               0 C     -1.011290000000    0.960957000000    0.000001000000
+               1 N     -1.306086000000    0.975537000000   -1.118876000000
+               2 H     -2.068270000000    1.013340000000    0.000003000000

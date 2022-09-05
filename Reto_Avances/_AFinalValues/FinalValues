@@ -1,0 +1,419 @@
+
+CoMn
+Total Energy       :        -4507.01830852 Eh         -122642.20318 eV
+FINAL SINGLE POINT ENERGY     -4507.018308516430
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      2.09324
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 302.81 AMU
+Total thermal energy                  -4506.95784484 Eh
+Total Enthalpy                    ...  -4506.95690063 Eh
+Final entropy term                ...      0.05617343 Eh     35.25 kcal/mol
+Final entropy term                ...      0.05617343 Eh     35.25 kcal/mol
+Final Gibbs free energy         ...  -4507.01307406 Eh
+TOTAL RUN TIME: 0 days 0 hours 33 minutes 22 seconds 282 msec
+
+
+
+
+CoMn_Solv
+Total Energy       :        -4507.03968595 Eh         -122642.78489 eV
+FINAL SINGLE POINT ENERGY     -4507.039685953541
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      2.53229
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 302.81 AMU
+Total thermal energy                  -4506.97967640 Eh
+Total Enthalpy                    ...  -4506.97873219 Eh
+Final entropy term                ...      0.05532601 Eh     34.72 kcal/mol
+Final entropy term                ...      0.05532601 Eh     34.72 kcal/mol
+Final Gibbs free energy         ...  -4507.03405819 Eh
+TOTAL RUN TIME: 0 days 7 hours 23 minutes 39 seconds 2 msec
+
+
+
+
+CoOOH
+Total Energy       :        -1529.86987946 Eh          -41629.87584 eV
+FINAL SINGLE POINT ENERGY     -1529.869879456465
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      3.29466
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 91.94 AMU
+Total thermal energy                  -1529.85021116 Eh
+Total Enthalpy                    ...  -1529.84926695 Eh
+Final entropy term                ...      0.03096287 Eh     19.43 kcal/mol
+Final entropy term                ...      0.03096287 Eh     19.43 kcal/mol
+Final Gibbs free energy         ...  -1529.88022982 Eh
+TOTAL RUN TIME: 0 days 0 hours 2 minutes 56 seconds 974 msec
+
+
+
+
+CoOOH_Solv
+Total Energy       :        -1529.87877606 Eh          -41630.11793 eV
+FINAL SINGLE POINT ENERGY     -1529.878776059700
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      4.52043
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 91.94 AMU
+Total thermal energy                  -1529.85925530 Eh
+Total Enthalpy                    ...  -1529.85831109 Eh
+Final entropy term                ...      0.03084448 Eh     19.36 kcal/mol
+Final entropy term                ...      0.03084448 Eh     19.36 kcal/mol
+Final Gibbs free energy         ...  -1529.88915558 Eh
+TOTAL RUN TIME: 0 days 0 hours 3 minutes 47 seconds 229 msec
+
+
+
+
+MnOOH
+Total Energy       :        -1298.32235516 Eh          -35329.14738 eV
+FINAL SINGLE POINT ENERGY     -1298.322355155807
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      1.79625
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 87.95 AMU
+Total thermal energy                  -1298.30294576 Eh
+Total Enthalpy                    ...  -1298.30200155 Eh
+Final entropy term                ...      0.03175210 Eh     19.92 kcal/mol
+Final entropy term                ...      0.03175210 Eh     19.92 kcal/mol
+Final Gibbs free energy         ...  -1298.33375366 Eh
+TOTAL RUN TIME: 0 days 0 hours 19 minutes 49 seconds 220 msec
+
+
+
+
+MnOOH_Solv
+Total Energy       :        -1298.33123069 Eh          -35329.38890 eV
+FINAL SINGLE POINT ENERGY     -1298.331230694785
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      2.53070
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 87.95 AMU
+Total thermal energy                  -1298.31209287 Eh
+Total Enthalpy                    ...  -1298.31114867 Eh
+Final entropy term                ...      0.03199894 Eh     20.08 kcal/mol
+Final entropy term                ...      0.03199894 Eh     20.08 kcal/mol
+Final Gibbs free energy         ...  -1298.34314761 Eh
+TOTAL RUN TIME: 0 days 0 hours 14 minutes 20 seconds 170 msec
+
+
+
+
+FeTi
+Total Energy       :        -3968.19000930 Eh         -107979.93975 eV
+FINAL SINGLE POINT ENERGY     -3968.190005244266
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      2.24336
+IR SPECTRUM
+RAMAN SPECTRUM
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 289.61 AMU
+Total thermal energy                  -3968.12789847 Eh
+Total Enthalpy                    ...  -3968.12695426 Eh
+Final entropy term                ...      0.05228647 Eh     32.81 kcal/mol
+Final entropy term                ...      0.05228647 Eh     32.81 kcal/mol
+Final Gibbs free energy         ...  -3968.17924073 Eh
+TOTAL RUN TIME: 0 days 1 hours 30 minutes 50 seconds 599 msec
+
+
+
+
+
+FeTi_Solv
+Total Energy       :        -3968.20141457 Eh         -107980.25010 eV
+FINAL SINGLE POINT ENERGY     -3968.201414567417
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      0.93433
+IR SPECTRUM
+RAMAN SPECTRUM
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 289.61 AMU
+Total thermal energy                  -3968.13910595 Eh
+Total Enthalpy                    ...  -3968.13816175 Eh
+Final entropy term                ...      0.05501395 Eh     34.52 kcal/mol
+Final entropy term                ...      0.05501395 Eh     34.52 kcal/mol
+Final Gibbs free energy         ...  -3968.19317569 Eh
+TOTAL RUN TIME: 0 days 2 hours 18 minutes 31 seconds 503 msec
+
+
+
+
+FeOOH
+Total Energy       :        -1410.90843167 Eh          -38392.77028 eV
+FINAL SINGLE POINT ENERGY     -1410.908431670578
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      2.21440
+IR SPECTRUM
+RAMAN SPECTRUM
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 88.86 AMU
+Total thermal energy                  -1410.91927709 Eh
+Total Enthalpy                    ...  -1410.91833288 Eh
+Final entropy term                ...      0.03277537 Eh     20.57 kcal/mol
+Final entropy term                ...      0.03277537 Eh     20.57 kcal/mol
+Final Gibbs free energy         ...  -1410.95110825 Eh
+TOTAL RUN TIME: 0 days 0 hours 5 minutes 3 seconds 955 msec
+
+
+
+
+FeOOH_Solv
+Total Energy       :        -1410.91770942 Eh          -38393.02274 eV
+FINAL SINGLE POINT ENERGY     -1410.917709419106
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      3.05477
+IR SPECTRUM
+RAMAN SPECTRUM
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 88.86 AMU
+Total thermal energy                  -1410.92797057 Eh
+Total enthalpy                    ...  -1410.92702636 Eh
+Final entropy term                ...      0.03255405 Eh     20.43 kcal/mol
+Final entropy term                ...      0.03255405 Eh     20.43 kcal/mol
+Final Gibbs free energy         ...  -1410.95958041 Eh
+TOTAL RUN TIME: 0 days 0 hours 6 minutes 53 seconds 641 msec
+
+
+
+
+
+TiOOH
+Total Energy       :         -997.26697626 Eh          -27137.01404 eV
+FINAL SINGLE POINT ENERGY      -997.266976264990
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      1.94114
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 80.91 AMU
+Total thermal energy                   -997.24726505 Eh
+Total Enthalpy                    ...   -997.24632084 Eh
+Final entropy term                ...      0.03172626 Eh     19.91 kcal/mol
+Final entropy term                ...      0.03172626 Eh     19.91 kcal/mol
+Final Gibbs free energy         ...   -997.27804710 Eh
+TOTAL RUN TIME: 0 days 0 hours 3 minutes 13 seconds 697 msec
+
+
+
+
+TiOOH_Solv
+Total Energy       :         -997.22765727 Eh          -27135.94412 eV
+FINAL SINGLE POINT ENERGY      -997.227657272701
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      3.52517
+IR SPECTRUM
+RAMAN SPECTRUM
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 80.91 AMU
+Total thermal energy                   -997.26299052 Eh
+Total Enthalpy                    ...   -997.26204631 Eh
+Final entropy term                ...      0.03198111 Eh     20.07 kcal/mol
+Final entropy term                ...      0.03198111 Eh     20.07 kcal/mol
+Final Gibbs free energy         ...   -997.29402741 Eh
+TOTAL RUN TIME: 0 days 0 hours 5 minutes 38 seconds 991 msec
+
+
+
+
+
+H2O
+Total Energy       :          -75.75185528 Eh           -2061.31278 eV
+FINAL SINGLE POINT ENERGY       -75.751855275097
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      0.00000
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 18.02 AMU
+Total thermal energy                    -75.73025289 Eh
+Total Enthalpy                    ...    -75.72930868 Eh
+Final entropy term                ...      0.01965608 Eh     12.33 kcal/mol
+Final entropy term                ...      0.01965608 Eh     12.33 kcal/mol
+Final Gibbs free energy         ...    -75.74896477 Eh
+TOTAL RUN TIME: 0 days 0 hours 5 minutes 35 seconds 60 msec
+
+
+
+
+H2O_Solv
+Total Energy       :          -75.75989575 Eh           -2061.53157 eV
+FINAL SINGLE POINT ENERGY       -75.759895745889
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      0.00000
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 18.02 AMU
+Total thermal energy                    -75.73876542 Eh
+Total Enthalpy                    ...    -75.73782121 Eh
+Final entropy term                ...      0.01966700 Eh     12.34 kcal/mol
+Final entropy term                ...      0.01966700 Eh     12.34 kcal/mol
+Final Gibbs free energy         ...    -75.75748821 Eh
+TOTAL RUN TIME: 0 days 0 hours 6 minutes 12 seconds 632 msec
+
+
+
+
+OH
+Total Energy       :          -75.09757459 Eh           -2043.50889 eV
+FINAL SINGLE POINT ENERGY       -75.097574592354
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      1.75173
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 17.01 AMU
+Total thermal energy                    -75.08704388 Eh
+Total Enthalpy                    ...    -75.08609968 Eh
+Final entropy term                ...      0.02026150 Eh     12.71 kcal/mol
+Final entropy term                ...      0.02026150 Eh     12.71 kcal/mol
+Final Gibbs free energy         ...    -75.10636118 Eh
+TOTAL RUN TIME: 0 days 0 hours 3 minutes 13 seconds 894 msec
+
+
+
+
+OH_Solv
+Total Energy       :          -75.10416325 Eh           -2043.68818 eV
+FINAL SINGLE POINT ENERGY       -75.104163251478
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      1.99979
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 17.01 AMU
+Total thermal energy                    -75.09367660 Eh
+Total Enthalpy                    ...    -75.09273240 Eh
+Final entropy term                ...      0.02026526 Eh     12.72 kcal/mol
+Final entropy term                ...      0.02026526 Eh     12.72 kcal/mol
+Final Gibbs free energy         ...    -75.11299765 Eh
+TOTAL RUN TIME: 0 days 0 hours 4 minutes 18 seconds 308 msec
+
+
+
+
+OHN
+Total Energy       :          -75.10388610 Eh           -2043.68064 eV
+FINAL SINGLE POINT ENERGY       -75.103886098089
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      0.86804
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 17.01 AMU
+Total thermal energy                    -75.09376818 Eh
+Total Enthalpy                    ...    -75.09282397 Eh
+Final entropy term                ...      0.01961180 Eh     12.31 kcal/mol
+Final entropy term                ...      0.01961180 Eh     12.31 kcal/mol
+Final Gibbs free energy         ...    -75.11243577 Eh
+TOTAL RUN TIME: 0 days 0 hours 4 minutes 4 seconds 175 msec
+
+
+
+
+OHN_Solv
+Total Energy       :          -75.24640125 Eh           -2047.55867 eV
+FINAL SINGLE POINT ENERGY       -75.246401246312
+                                *** OPTIMIZATION RUN DONE ***
+DIPOLE MOMENT
+Magnitude (Debye)      :      1.32311
+IR SPECTRUM
+RAMAN SPECTRUM  
+
+THERMOCHEMISTRY AT 298.15K
+Temperature         ... 298.15 K
+Pressure            ... 1.00 atm
+Total Mass          ... 17.01 AMU
+Total thermal energy                    -75.23597615 Eh
+Total Enthalpy                    ...    -75.23503194 Eh
+Final entropy term                ...      0.01959251 Eh     12.29 kcal/mol
+Final entropy term                ...      0.01959251 Eh     12.29 kcal/mol
+Final Gibbs free energy         ...    -75.25462445 Eh
+TOTAL RUN TIME: 0 days 0 hours 3 minutes 35 seconds 353 msec
+
+
+
+
+

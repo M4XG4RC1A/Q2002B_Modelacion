@@ -1,0 +1,24 @@
+echo $1 >> $2
+cat $1/COMPLETE/*.out | grep "Total Energy       :" | tail -1 >> $2 
+grep "FINAL SINGLE POINT ENERGY     " $1/COMPLETE/*.out | tail -1 >> $2
+grep "*** OPTIMIZATION RUN DONE ***" $1/COMPLETE/*.out >> $2
+grep "DIPOLE MOMENT" $1/COMPLETE/*.out >> $2
+grep "Magnitude (Debye)      :" $1/COMPLETE/*.out >> $2
+grep "IR SPECTRUM" $1/COMPLETE/*.out >> $2
+grep "RAMAN SPECTRUM" $1/COMPLETE/*.out >> $2
+echo "" >> $2
+grep "THERMOCHEMISTRY AT 298.15K" $1/COMPLETE/*.out >> $2
+grep "Temperature         ..." $1/COMPLETE/*.out >> $2
+grep "Pressure            ..." $1/COMPLETE/*.out >> $2
+grep "Total Mass          ..." $1/COMPLETE/*.out >> $2
+grep "Total thermal energy           " $1/COMPLETE/*.out >> $2
+grep "Total Enthalpy                    ..." $1/COMPLETE/*.out >> $2
+grep "Final entropy term                ..." $1/COMPLETE/*.out >> $2
+grep "Final entropy term                ..." $1/COMPLETE/*.out >> $2
+grep "Final Gibbs free energy         ..." $1/COMPLETE/*.out >> $2
+grep "TOTAL RUN TIME: " $1/COMPLETE/*.out >> $2
+echo "" >> $2
+echo "" >> $2
+echo "" >> $2
+echo "" >> $2
+

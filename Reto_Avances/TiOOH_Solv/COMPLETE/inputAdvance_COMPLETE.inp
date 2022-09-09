@@ -10,10 +10,10 @@ end
        fepstype cosmo
 end
 %scf                  
-       Maxlter 500
+       MaxIter 500
 end
 %geom                  
-       Maxlter 500
+       MaxIter 500
        Convergence loose                                                  
 end
 
@@ -30,7 +30,7 @@ end
 %coords
         CTyp xyz
         Charge 0
-        Mult 1
+        Mult 2
         Units Angs
         coords
 	Ti    -1.671960    2.457770   -0.000000

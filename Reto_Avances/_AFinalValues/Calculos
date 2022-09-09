@@ -6,7 +6,18 @@ Espontaneidad de la reaccion
 Espontanea a la derecha
 
 Potencial estandar
-
+E = -ΔG(soln)/nF
+ΔG(soln) = ΔG(gas) + ΔG(solv,fc) - ΔG(solv,Fc+)
+ΔG(gas) = CoOOH + MnOOH - CoMn  = 
+-1529.88 Eh -1298.33 Eh - -4507.01 Eh
+1678.79 - 2828*2 = -3977.63
+ΔG(solv,fc) = CoOOH_Solv + MnOOH_Solv - MnOOH - CoOOH = 
+-1529.89 Eh -1298.34 Eh - -1529.88 Eh - -1298.33 Eh
+9.08*3 = 27.24
+ΔG(solv,fc+) = CoMn_Solv - CoMn = 
+-4507.03 Eh - -4507.01 Eh
+-0.02
+-3977.63 + 27.24 + 0.02 = -3950.37
 
 Propuesta (FeTi)
 Espontaneidad de la reaccion
@@ -15,3 +26,15 @@ Espontaneidad de la reaccion
 -4232.85 - 2991.84 + 3968.17 + 151.5 + 150.22 = -2954.8
 
 Potencial estandar
+ΔG(soln) = ΔG(gas) + ΔG(solv,fc) - ΔG(solv,Fc+)
+ΔG(gas) = FeOOH + TiOOH - FeTi 
+-1410.95 Eh -997.28 Eh - -3968.18 Eh
+1559.95 - 2408.23*2 = -3256.51
+ΔG(solv,fc) = FeOOH_Solv + TiOOH_Solv - TiOOH - FeOOH
+-1410.96 Eh -997.29 Eh - -1410.95 Eh - -997.28 Eh
+-0.02*3 = -0.06
+ΔG(solv,fc+) = FeTi_Solv - FeTi
+-3968.19 Eh - -3968.18 Eh
+-0.01
+
+-3256.51 - 0.06 + 0.01 = -3256.56
